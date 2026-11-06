@@ -1,0 +1,66 @@
+name: Android signed Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      JAVA_VERSION: '21'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+      - name: Install Android SDK
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Check release scripts
+        run: |
+          python3 tests/test_android_release_scripts.py
+          python3 tests/test_github_android_signing.py
+      - name: Build and sign both APKs
+        shell: bash
+        env:
+          ANDROID_RELEASE_KEYSTORE_BASE64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
+          TVADB_KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEY_ALIAS }}
+          TVADB_STORE_PASSWORD: ${{ secrets.ANDROID_RELEASE_STORE_PASSWORD }}
+          TVADB_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
+          TVADB_KEYSTORE: ${{ runner.temp }}/tvadb-release.jks
+        run: |
+          set -euo pipefail
+          : "${ANDROID_RELEASE_KEYSTORE_BASE64:?Missing release keystore secret}"
+          : "${TVADB_KEY_ALIAS:?Missing release alias secret}"
+          : "${TVADB_STORE_PASSWORD:?Missing release store password secret}"
+          : "${TVADB_KEY_PASSWORD:?Missing release key password secret}"
+          umask 077
+          trap 'rm -f "$TVADB_KEYSTORE"' EXIT
+          printf '%s' "$ANDROID_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$TVADB_KEYSTORE"
+          ./scripts/build-android-client-release.sh
+          ./scripts/build-android-tv-release.sh
+          cd dist
+          sha256sum TVDeck-Android-release.apk TVDeck-Connect-release.apk > SHA256SUMS
+      - name: Remove signing material
+        if: always()
+        shell: bash
+        run: rm -f "$RUNNER_TEMP/tvadb-release.jks"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TVDeck-signed-release
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            dist/TVDeck-Android-release.apk
+            dist/TVDeck-Connect-release.apk
+            dist/SHA256SUMS

@@ -1,0 +1,18 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.tvadb.onboarding'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.tvadb.onboarding'
+        minSdk 23
+        targetSdk 28
+        versionCode 1
+        versionName '1.0'
+    }
+    // Direct-distribution companion retains legacy LAN behavior; store targeting needs a separate migration.
+    lint { disable 'ExpiredTargetSdkVersion' }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+}

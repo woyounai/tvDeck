@@ -1,0 +1,21 @@
+TVDeck Android uses the following third-party components:
+
+LibADB Android 3.1.1 — Muntashir Al-Islam, Apache-2.0 option of GPL-3.0-or-later OR Apache-2.0.
+Source: https://github.com/MuntashirAkon/libadb-android/tree/3.1.1
+The included adb-transport source module patches peer EOF buffering and removes peer-info debug logging.
+
+Spake2-Java 2.2.1 — Muntashir Al-Islam, LGPL-3.0.
+Source: https://github.com/MuntashirAkon/spake2-java/tree/2.2.1
+Includes EdDSA-Java-derived code under CC0 and BoringSSL-derived code under its original licenses.
+The complete TVDeck application source and Gradle files permit rebuilding with a modified dependency. No ADB identity or signing material is required to build your own APK.
+
+Conscrypt Android 2.5.3 — Apache-2.0, with BoringSSL component licenses.
+Source: https://github.com/google/conscrypt
+Bouncy Castle 1.81 — MIT-style Bouncy Castle license.
+Source and license: https://www.bouncycastle.org/licence.html
+ZXing Core 3.5.3 — Apache-2.0.
+Source: https://github.com/zxing/zxing/tree/zxing-3.5.3
+AndroidX annotations — Apache-2.0.
+Source: https://android.googlesource.com/platform/frameworks/support/
+
+Apache-2.0, GPL-3.0 and LGPL-3.0 license texts are included in assets/licenses/ in this APK. Dependency JAR/AAR files retain their upstream license entries.

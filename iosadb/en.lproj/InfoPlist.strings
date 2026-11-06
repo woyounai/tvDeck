@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "TVDeck";
+"NSLocalNetworkUsageDescription" = "TVDeck uses the local network to discover and connect to Android TVs for ADB management.";
+"NSPhotoLibraryAddUsageDescription" = "TVDeck saves Android TV screenshots to your photo library.";
+"NSCameraUsageDescription" = "TVDeck scans TV connection codes and Aerial management QR codes.";

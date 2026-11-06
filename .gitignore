@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode user-specific data
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Xcode and Swift build output
+DerivedData/
+build/
+.build/
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+
+# Project-generated artifacts
+dist/
+design-audit/
+
+# Signing credentials and secrets
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.cer
+*.mobileprovision
+*.provisionprofile
+*.key
+*.pem
+.env
+.env.*
+!.env.example
+
+# Temporary and editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local agent scratch and device diagnostics
+work/
+.scratch/
+*.log

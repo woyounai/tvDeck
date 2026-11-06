@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_description">TVDeck Connect helps pair your iPhone with an Android TV. It detects the local ADB TCP endpoint and shows a QR code; it never enables debugging or stores ADB credentials.</string>
+    <string name="intro">Scan the TV’s local ADB address with TVDeck on iPhone.</string>
+    <string name="title">TVDeck  /  CONNECT</string>
+    <string name="checking">Checking ADB network access…</string>
+    <string name="qr_description">TVDeck connection QR code</string>
+    <string name="ready">ADB is ready</string>
+    <string name="ready_detail">%1$s  ·  Scan this code from TVDeck on your iPhone. Approve ADB authorization on the TV when prompted.\nThe code contains only the local address and port, never credentials.</string>
+    <string name="no_network">TV is offline</string>
+    <string name="waiting_adb">Waiting for ADB TCP</string>
+    <string name="no_network_detail">Connect the TV to Wi-Fi or Ethernet. Keep the iPhone on the same local network.</string>
+    <string name="waiting_adb_detail">Open TV Settings → About and select Build number seven times to unlock Developer options. Enable ADB debugging there. On Android 11+, use Wireless debugging and pair from the iPhone app. Classic ADB TCP first needs an authorized computer to run adb tcpip 5555. This app cannot enable ADB itself. The QR code appears automatically when ready.</string>
+</resources>
