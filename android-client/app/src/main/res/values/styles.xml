@@ -1,0 +1,27 @@
+<resources>
+    <style name="DeckTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#23E5F0</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#090B19</item>
+        <item name="android:navigationBarColor">#090B19</item>
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="DeckDarkDialogOverlay">
+        <item name="android:alertDialogTheme">@style/DeckDarkAlertDialog</item>
+    </style>
+    <style name="DeckLightDialogOverlay">
+        <item name="android:alertDialogTheme">@style/DeckLightAlertDialog</item>
+    </style>
+    <style name="DeckDarkAlertDialog" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowMinWidthMajor">92%</item>
+        <item name="android:windowMinWidthMinor">92%</item>
+    </style>
+    <style name="DeckLightAlertDialog" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowMinWidthMajor">92%</item>
+        <item name="android:windowMinWidthMinor">92%</item>
+    </style>
+</resources>

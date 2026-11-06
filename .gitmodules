@@ -1,0 +1,3 @@
+[submodule "Vendor/adb-mobile"]
+	path = Vendor/adb-mobile
+	url = https://github.com/wsvn53/adb-mobile.git

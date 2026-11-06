@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "TVDeck";
+"NSLocalNetworkUsageDescription" = "用于发现和连接局域网内的 Android TV，并执行 ADB 管理操作。";
+"NSPhotoLibraryAddUsageDescription" = "用于将 Android TV 截图保存到照片。";
+"NSCameraUsageDescription" = "用于扫描电视连接二维码及 Aerial 手机管理二维码。";

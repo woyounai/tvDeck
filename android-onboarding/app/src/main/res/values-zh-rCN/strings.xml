@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_description">TVDeck Connect 帮助 iPhone 连接 Android TV：检测局域网 ADB TCP 端口并显示二维码，不代替系统开启调试，也不保存 ADB 凭据。</string>
+    <string name="intro">用 iPhone 上的 TVDeck 扫描电视的 ADB 地址。</string>
+    <string name="title">TVDeck  /  CONNECT</string>
+    <string name="checking">正在检测 ADB 网络环境…</string>
+    <string name="qr_description">TVDeck 连接二维码</string>
+    <string name="ready">ADB 已就绪</string>
+    <string name="ready_detail">%1$s  ·  用 iPhone TVDeck 首页的扫码添加连接。首次连接时，请在电视上允许 ADB 授权。\n此二维码只包含局域网地址和端口，不包含授权密钥。</string>
+    <string name="no_network">电视未连接局域网</string>
+    <string name="waiting_adb">等待 ADB 网络端口</string>
+    <string name="no_network_detail">先连接 Wi-Fi 或有线网络，并确保手机与电视处于同一局域网。</string>
+    <string name="waiting_adb_detail">在电视“设置 → 关于”连续点击版本号约 7 次，解锁开发者选项，再开启 ADB 调试。Android 11+ 可开启无线调试并在手机 App 中使用配对入口。传统 ADB TCP 需先用已授权电脑执行 adb tcpip 5555；此 App 无法代替系统开启该端口。开启后此页自动显示二维码。</string>
+</resources>

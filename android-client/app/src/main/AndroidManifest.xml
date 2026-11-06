@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <application android:name=".DeckApplication" android:label="TVDeck" android:icon="@drawable/icon" android:theme="@style/DeckTheme" android:allowBackup="false" android:usesCleartextTraffic="true" android:supportsRtl="true">
+        <activity android:name=".UsageNoticeActivity" android:exported="false" />
+        <activity android:name=".ScanActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize">
+
+        </activity>
+        <activity-alias android:name=".NeonLauncher" android:targetActivity=".MainActivity" android:enabled="true" android:exported="true" android:icon="@drawable/icon" android:label="TVDeck">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".PearlLauncher" android:targetActivity=".MainActivity" android:enabled="false" android:exported="true" android:icon="@drawable/icon_pearl" android:label="TVDeck">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity-alias>
+        <service android:name=".ConnectionService" android:exported="false" android:foregroundServiceType="connectedDevice"/>
+        <receiver android:name=".DeckWidget" android:exported="false" android:label="TVDeck Remote">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/remote_widget_info"/>
+        </receiver>
+    </application>
+</manifest>

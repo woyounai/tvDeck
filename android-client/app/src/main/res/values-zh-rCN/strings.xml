@@ -1,0 +1,239 @@
+<resources>
+    <string name="intro">通过局域网 ADB 直连 Android TV。遥控电视、管理应用与文件，并执行命令和查看诊断。</string>
+    <string name="not_connected">未连接</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="pair">无线配对</string>
+    <string name="scan_qr">扫码添加电视</string>
+    <string name="discover">发现局域网设备</string>
+    <string name="connect_help">手机与电视需处于可互通的局域网。开启电视 ADB 调试及网络端口（通常为 5555），并在电视上允许授权。Android 11+ 无线调试需先配对，配对端口与连接端口不同。</string>
+    <string name="operation_failed">操作失败</string>
+    <string name="close">关闭</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="confirm_destructive">此操作会修改电视上的状态或数据，是否继续？</string>
+    <string name="host">电视 IP 或主机名</string>
+    <string name="port">连接端口</string>
+    <string name="pairing_port">配对端口</string>
+    <string name="pairing_code">六位配对码</string>
+    <string name="invalid_endpoint">请检查地址、端口和配对码</string>
+    <string name="connecting">正在连接，请在电视上允许授权…</string>
+    <string name="connect_failed">连接失败</string>
+    <string name="pair_failed">配对失败</string>
+    <string name="discovery_failed">局域网发现失败</string>
+    <string name="files">文件</string>
+    <string name="apps">应用</string>
+    <string name="remote">遥控</string>
+    <string name="shell">Shell</string>
+    <string name="tools">工具</string>
+    <string name="loading">正在读取…</string>
+    <string name="completed">已完成</string>
+    <string name="timeout">操作超时</string>
+    <string name="output_too_large">输出超过显示上限</string>
+    <string name="up">上级</string>
+    <string name="refresh">刷新</string>
+    <string name="upload">上传</string>
+    <string name="download">下载</string>
+    <string name="new_folder">新建文件夹</string>
+    <string name="open">打开</string>
+    <string name="rename">重命名</string>
+    <string name="delete">删除</string>
+    <string name="invalid_name">文件名无效</string>
+    <string name="save">保存</string>
+    <string name="system_apps">系统应用</string>
+    <string name="user_apps">用户应用</string>
+    <string name="install">安装 APK</string>
+    <string name="app_details">应用详情</string>
+    <string name="launch">启动</string>
+    <string name="force_stop">强行停止</string>
+    <string name="clear_cache">清缓存</string>
+    <string name="clear_data">清数据</string>
+    <string name="uninstall">卸载</string>
+    <string name="export_apk">导出 APK</string>
+    <string name="split_export_notice">此应用包含拆分 APK，请从文件页下载列表中全部文件以保留完整安装包。</string>
+    <string name="home">主页</string>
+    <string name="back">返回</string>
+    <string name="menu">菜单</string>
+    <string name="up_key">上 ↑</string>
+    <string name="left">左 ←</string>
+    <string name="ok">确定</string>
+    <string name="right">右 →</string>
+    <string name="down">下 ↓</string>
+    <string name="volume_down">音量 −</string>
+    <string name="volume_up">音量 +</string>
+    <string name="mute">静音</string>
+    <string name="play_pause">播放／暂停</string>
+    <string name="rewind">快退</string>
+    <string name="forward">快进</string>
+    <string name="more_keys">更多按键</string>
+    <string name="power">电源</string>
+    <string name="input_source">信号源</string>
+    <string name="settings">设置</string>
+    <string name="search">搜索</string>
+    <string name="sync_keyboard">电视键盘</string>
+    <string name="send">发送</string>
+    <string name="text_unsupported">当前没有支持的焦点输入框，密码框不可读取或修改。</string>
+    <string name="text_conflict">电视文本或焦点已变化，请关闭并重新打开键盘进行同步。</string>
+    <string name="keyboard_help">读取电视焦点输入框。发送时先比对原文再替换，并执行确认；不会盲目覆盖电视端修改。</string>
+    <string name="mouse">鼠标触控板</string>
+    <string name="mouse_help">滑动移动指针，轻点单击。</string>
+    <string name="mouse_coordinate_help">轻点对应位置可点击电视屏幕。</string>
+    <string name="mouse_two_finger_navigation">双指滑动控制方向，向左或向右滑动后保持双指接触可连续移动。</string>
+    <string name="double_click">双击</string>
+    <string name="middle_click">中键</string>
+    <string name="center_pointer">光标居中</string>
+    <string name="right_click">右键</string>
+    <string name="screen_preview">连接屏幕预览</string>
+    <string name="preview_mode">截图兼容预览，刷新速度受电视截图能力限制。</string>
+    <string name="stop_preview">断开屏幕</string>
+    <string name="shell_hint">输入命令，点击发送后执行</string>
+    <string name="presets">常用命令</string>
+    <string name="clear">清空</string>
+    <string name="screenshot">截图</string>
+    <string name="capture_failed">电视未返回有效画面</string>
+    <string name="network">网络诊断</string>
+    <string name="device_info">设备信息</string>
+    <string name="logs">实时日志</string>
+    <string name="record">录屏</string>
+    <string name="open_tv_settings">打开电视设置</string>
+    <string name="reboot">重启电视</string>
+    <string name="camera_unavailable">相机不可用，请允许相机权限或手动添加电视。</string>
+<string name="pause">暂停</string><string name="resume">继续</string>
+<string name="app_icon">App 图标</string><string name="icon_neon">霓虹</string><string name="icon_pearl">珠白</string><string name="icon_changed">图标已更新，启动器可能需要片刻刷新。</string><string name="licenses">第三方许可</string>
+<string name="drag">按住拖动</string><string name="release_drag">释放拖动</string><string name="scroll_up">向上滚动</string><string name="scroll_down">向下滚动</string>
+<string name="resync">从电视重新同步</string><string name="keyboard_live">正在双向同步；发生冲突后暂停写入。</string>
+<string name="device_name">设备名称</string><string name="device_group">分组</string><string name="device_note">备注</string><string name="edit_device">编辑设备</string><string name="favorite">收藏／取消收藏</string><string name="connection_service">电视连接</string>
+<string name="upload_folder">上传文件夹</string><string name="download_folder">下载文件夹</string><string name="download_selection">下载所选项目</string><string name="delete_selection">删除所选项目</string><string name="replace_files">目标中的同名文件可能被替换，是否继续？</string>
+<string name="apk_analysis">APK 分析</string><string name="install_history">安装历史</string><string name="obb_failed">APK 已安装，但 OBB 部署失败，请检查电视存储权限。</string>
+<string name="install_success">成功</string><string name="install_failed">失败</string><string name="no_install_history">暂无安装记录</string>
+<string name="preview_connecting">正在启动 H.264 预览…</string><string name="preview_video">H.264 解码预览</string>
+<string name="scan_lan">扫描局域网</string><string name="scan_finished">局域网扫描完成</string><string name="command_history">本次历史</string><string name="command_favorites">收藏命令</string><string name="save_favorite">收藏当前命令</string>
+<string name="stop_scan">停止扫描</string><string name="scanning_lan">正在扫描局域网…</string><string name="no_devices_found">未发现设备</string><string name="retry">重试</string>
+<string name="client_settings">客户端设置</string><string name="language">语言</string><string name="appearance">外观</string><string name="follow_system">跟随系统</string><string name="light">浅色</string><string name="dark">深色</string><string name="auto_connect">启动时连接最近设备</string><string name="replace_install">安装时覆盖已有应用</string><string name="load_icons">加载应用名称和图标</string><string name="remote_recording">录屏开始时打开遥控</string>
+<string name="log_tag">Tag 过滤</string><string name="log_pid">PID 过滤</string><string name="all_levels">所有等级</string><string name="developer_settings">打开开发者选项</string>
+<string name="scan_aerial_qr">扫码连接 Aerial</string>
+<string name="aerial_scan_hint">请扫描电视 Aerial 的手机管理二维码，并将手机与电视连接到同一可信局域网。</string>
+<string name="invalid_aerial_qr">这不是 Aerial 管理二维码，请扫描电视 Aerial 显示的二维码。</string>
+<string name="aerial_open_failed">无法打开 Aerial，请检查二维码并确认手机已安装浏览器。</string>
+<string name="aerial_not_installed">尚未安装 Aerial</string>
+<string name="aerial_checking">正在检测 Aerial 安装状态…</string>
+<string name="aerial_install">一键安装 Aerial</string>
+<string name="aerial_upgrade">升级 Aerial</string>
+<string name="aerial_downloading">正在下载 Aerial 官方版本…</string>
+<string name="aerial_installing">正在安装 Aerial…</string>
+<string name="aerial_current">已安装的 Aerial 为当前版本或更新版本，无需升级。</string>
+<string name="aerial_installed">Aerial 安装成功。</string>
+<string name="aerial_guard_hint">Standard 声明为主屏桌面；电视固件拒绝安装桌面应用时可选 Guard。升级保留已安装的类型。</string>
+<string name="aerial_install_hint">下载官方最新稳定 APK，随后执行安装说明 Windows 第 3、6 步的授权与启动。保留应用数据及原有通知监听服务，显示每步结果；不配置默认桌面和屏保接管。</string>
+<string name="aerial_detection_failed">无法检测 Aerial，请检查 ADB 连接后重试。</string>
+<string name="aerial_download_failed">Aerial 安装包校验失败，未执行安装。</string>
+<string name="aerial_device_changed">设备或 Aerial 版本类型已变更，请重新连接后重试。</string>
+<string name="aerial_unknown">尚未读取 Aerial 状态</string>
+<string name="aerial_address">Aerial 手机管理地址（基础地址）</string>
+<string name="aerial_configuring">正在授权并启动 Aerial…</string>
+<string name="aerial_configure">授权并启动</string>
+<string name="aerial_retry_guard">尝试安装 Guard 版</string>
+<string name="aerial_setup_report">Aerial 配置结果</string>
+<string name="aerial_setup_complete">授权命令执行完成，Aerial 已启动。</string>
+<string name="aerial_setup_partial">Aerial 已启动，部分授权失败或固件不支持，请查看结果。</string>
+<string name="aerial_launch_failed">未确认 Aerial 启动成功，请查看配置结果。</string>
+<string name="aerial_unsupported_sdk">不支持 Android 4.0（SDK 14）以下的系统。</string>
+<string name="vpn_lan_help">开启 VPN 时，请在 VPN 设置中允许 TVDeck 访问局域网。系统 VPN 锁定策略仍可能阻止连接；请使用电视的局域网数字 IP。</string>
+    <string name="local_network_devices">局域网设备</string>
+    <string name="my_tvs">我的电视</string>
+    <string name="no_devices_yet">还没有保存电视。扫描局域网或手动添加地址。</string>
+    <string name="general">通用</string>
+    <string name="visual_theme">界面主题</string>
+    <string name="theme_standard">经典</string>
+    <string name="theme_cyberpunk">赛博朋克</string>
+    <string name="about">关于</string>
+    <string name="remote_preferences">遥控偏好设置</string>
+    <string name="cyberpunk_theme_hint">霓虹点缀与发光卡片，可搭配浅色、深色或跟随系统外观。</string>
+    <string name="current_location">当前位置</string><string name="more">更多</string><string name="folder">文件夹</string><string name="folder_empty">此文件夹为空</string><string name="no_search_results">没有匹配的文件</string><string name="search_files">搜索当前文件夹</string>
+    <string name="sort_by">排序方式</string><string name="sort_direction">排序顺序</string><string name="sort_name">名称</string><string name="sort_date">修改日期</string><string name="sort_size">大小</string><string name="ascending">升序</string><string name="descending">降序</string>
+    <string name="app_filter_all">全部应用</string><string name="app_filter_user">用户应用</string><string name="app_filter_system">系统应用</string>
+    <string name="no_apps_found">没有匹配的应用</string>
+    <string name="aerial_check_update">检查 Aerial 更新</string><string name="aerial_update_available">发现新版 Aerial，点击“升级”安装。</string><string name="aerial_home_status">桌面接管状态</string><string name="aerial_default_home">默认桌面为 Aerial</string><string name="aerial_home_guard">桌面守护已启用</string><string name="yes">是</string><string name="no">否</string>
+    <string name="shell_keywords">命令关键词</string><string name="shell_ready">TVDeck Shell 已就绪。点击发送后才会执行命令。</string><string name="performance">性能与存储</string>
+    <string name="screen_debugging">屏幕与诊断</string><string name="device_management">电视设置</string><string name="risky_actions">重启选项</string><string name="remote_buttons">按键遥控</string><string name="default_remote_mode">默认遥控模式</string><string name="default_live_screen_control">屏幕输入模式</string><string name="touch_mode">触控</string>
+    <string name="remote_screen">屏幕</string>
+    <string name="remote_center">遥控中心</string>
+    <string name="remote_input">信号源</string>
+    <string name="remote_channel">频道</string>
+    <string name="channel_empty">输入频道号</string>
+    <string name="remote_haptics">遥控触感反馈</string>
+    <string name="volume_unsupported">电视未提供音量范围，无法使用滑轨。</string>
+    <string name="remote_volume">音量</string><string name="remote_adjust_hint">点按调节一次，长按音量或频道键连续调节，松手停止。</string>
+    <string name="channel_up">频道加</string>
+    <string name="channel_down">频道减</string>
+    <string name="number_pad">数字键盘</string>
+    <string name="remote_delete">删除</string>
+    <string name="keyboard_confirm">确认</string>
+    <string name="install_formats_hint">支持 APK、APKS、XAPK 和 APKM</string>
+    <string name="app_name_label">应用名</string><string name="package_name_label">包名</string><string name="permissions_label">权限</string><string name="none">无</string>
+    <string name="app_type">类型</string><string name="app_version">版本</string><string name="apk_path_label">APK 路径</string>
+    <string name="connected">已连接</string>
+<string name="reconnecting_attempt">正在重连（%1$d/%2$d）…</string>
+<string name="retry_video_preview">重试高性能预览（H.264）</string>
+<string name="preview_no_data">未收到视频数据，请检查电视录屏支持及连接。</string>
+<string name="preview_invalid_data">收到 %1$d 字节，但未识别到有效 H.264 视频头；电视可能拒绝了录屏。</string>
+<string name="preview_first_frame_timeout">已收到 H.264 视频头，但首帧解码等待超时。</string>
+<string name="preview_stream_ended">电视已停止 H.264 输出，尚未解码出画面。</string>
+<string name="preview_decode_failed">视频解码失败：%1$s</string>
+    <string name="preview_touch">触屏控制</string>
+    <string name="preview_zoom">放大预览</string>
+    <string name="preview_reset_zoom">重置缩放</string>
+    <string name="preview_fullscreen">进入全屏</string>
+    <string name="preview_exit_fullscreen">退出全屏</string>
+    <string name="preview_show_controls">展开屏幕控制栏</string>
+    <string name="preview_hide_controls">收起屏幕控制栏</string>
+    <string name="preview_orientation">屏幕方向</string>
+    <string name="preview_orientation_auto">自动</string>
+    <string name="preview_orientation_portrait">竖屏</string>
+    <string name="preview_orientation_landscape">横屏</string>
+    <string name="preview_gesture_help">双指捏合可缩放（1–4 倍），双指拖动可移动视野。单指操作电视。</string>
+    <string name="preview_mouse">鼠标控制</string>
+    <string name="scan_connection_qr">扫码连接电视或 Aerial</string>
+    <string name="scan_connection_qr_hint">扫描电视连接二维码，或电视上显示的 Aerial 管理二维码。</string>
+    <string name="invalid_connection_qr">不是有效的电视连接或 Aerial 二维码。</string>
+    <string name="legal_title">使用须知与风险声明</string>
+    <string name="legal_version">声明版本</string>
+    <string name="legal_region">适用声明</string>
+    <string name="legal_mainland">中国大陆</string>
+    <string name="legal_international">中国大陆以外</string>
+    <string name="legal_language">声明语言</string>
+    <string name="legal_intro">本工具通过 ADB 管理 Android 设备。请阅读以下内容，特别是数据风险、安全权限及责任边界。对条款有疑问时，可通过下方项目反馈入口请求说明。</string>
+    <string name="legal_scope_title">1. 授权范围与合法使用</string>
+    <string name="legal_scope">您应仅访问自己拥有或已获得明确管理授权的设备，并遵守适用法律。不得利用本工具未经授权访问、干扰他人设备，或侵害他人的数据、隐私及其他合法权利。操作前请核对目标设备、文件和应用。</string>
+    <string name="legal_risk_title">2. 数据丢失与设备风险</string>
+    <string name="legal_risk">删除文件、清除应用数据、卸载或安装软件、执行 Shell 命令、重启及修改设备设置，可能导致数据丢失、应用异常或设备功能变化。部分操作无法通过本工具撤销。请先备份重要数据，确认操作后果，并按提示进行操作。连接超时不代表操作未执行，重试前请检查设备实际状态。</string>
+    <string name="legal_security_title">3. ADB 安全与权限</string>
+    <string name="legal_security">ADB 授权可能允许读取设备信息、传输文件及执行管理命令。请在可信网络中使用，谨慎授予长期调试权限，保护配对信息及连接凭据。不再使用时，可在设备端撤销调试授权。请勿向不可信对象公开调试端口或凭据。</string>
+    <string name="legal_compatibility_title">4. 功能范围与第三方软件</string>
+    <string name="legal_compatibility">功能效果受设备系统、厂商限制、权限及网络状况影响。请在重要操作后检查结果。第三方应用、下载来源及其服务可能适用独立条款和许可；安装或运行前请核验来源和权限。本声明不替代开源软件许可证或另行提供的隐私说明。</string>
+    <string name="legal_rights_title">5. 责任边界与您的权利</string>
+    <string name="legal_rights_cn">在法律允许的范围内，本工具按现状提供，不保证兼容所有设备或始终不中断、无错误。因未经授权的使用、未按明确操作提示进行操作或第三方原因产生的损失，应依据适用法律、具体事实、因果关系及各方过错确定责任。开发者不通过本声明免除依法应承担的责任。对人身损害，以及因故意或重大过失造成的财产损失，不作免责。您的法定权利和依法可获得的救济不受影响；法律的强制性规定优先适用。</string>
+    <string name="legal_rights_intl">在适用法律允许的范围内，本工具按现状及可提供状态提供，不保证兼容所有设备、持续可用或没有错误。有关保障、损失赔偿及其他责任，应依据适用法律和具体事实确定。本声明不排除、限制或修改依法不得排除、限制或修改的消费者权利、法定保障、救济或责任，包括适用时有关可接受质量、特定用途适用性以及合理注意和技能的保障。如本声明与适用法律的强制性规定冲突，以该规定为准。</string>
+    <string name="legal_acceptance_title">6. 同意、版本与记录</string>
+    <string name="legal_acceptance">您可以在同意前阅读全部条款、切换声明语言，或选择不同意。勾选确认并点击“同意并继续”表示接受当前显示版本。本机保存声明版本、系统识别的地区、语言及同意时间，以便后续核对。实质性更新后会重新征求同意。不同意时，本工具停留在声明页，不开放设备连接和操作。</string>
+    <string name="legal_ack">我已阅读并理解本声明，特别是数据风险、安全权限及责任边界，并同意当前版本。</string>
+    <string name="legal_agree">同意并继续</string>
+    <string name="legal_decline">不同意</string>
+    <string name="legal_declined">您尚未同意。设备连接和操作不可用；您可以继续阅读并重新选择。</string>
+    <string name="legal_feedback">条款说明与项目反馈</string>
+    <string name="legal_required">请先打开 App 阅读并同意使用须知。</string>
+    <string name="legal_store_failed">未能保存同意记录，请重试。</string>
+    <string name="legal_record_hint">已同意的版本、地区和语言</string>
+    <string name="aerial_consent_install_title">Aerial 安装告知</string>
+    <string name="aerial_consent_configure_title">Aerial 授权告知</string>
+    <string name="aerial_consent_target">目标电视</string>
+    <string name="aerial_consent_edition">版本类型</string>
+    <string name="aerial_consent_install_body">本次将从 Aerial 官方 GitHub 下载最新稳定版 APK，在目标电视上安装或升级，然后授予下列权限并启动 Aerial。请确认您有权管理此电视。安装失败或设备异常可能影响使用，升级前请备份重要数据。</string>
+    <string name="aerial_consent_configure_body">本次将通过 ADB 向目标电视上已安装的 Aerial 授予下列权限，然后启动 Aerial。请确认您有权管理此电视。</string>
+    <string name="aerial_consent_permissions">将尝试授予或允许 Aerial 申请位置信息、安全及系统设置修改、悬浮窗、安装其他应用、应用使用情况、通知访问，以及开机或关联启动等权限，并在支持时放开受限设置。上述权限授予电视上的 Aerial，部分权限会在本次操作结束后持续生效。不再需要时，请卸载 Aerial，或按其官方说明撤销相关授权。</string>
+    <string name="aerial_consent_permissions_lite">将尝试授予 Aerial Lite 写入安全设置的权限，使其能够修改电视系统配置。此权限可能在本次操作结束后持续生效。不再需要时，请卸载 Aerial Lite，或按其官方说明撤销相关授权。</string>
+    <string name="aerial_consent_source">官方来源：https://github.com/pengchujin/aerial-tv</string>
+    <string name="aerial_consent_result">权限支持取决于电视固件，执行后会展示授权和启动结果。请在理解并接受上述变更后继续。</string>
+    <string name="aerial_consent_install_agree">同意安装并授权</string>
+    <string name="aerial_consent_configure_agree">同意授权</string>
+</resources>

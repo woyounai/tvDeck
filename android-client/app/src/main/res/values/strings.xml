@@ -1,0 +1,239 @@
+<resources>
+    <string name="intro">Connect your Android phone directly to Android TV over local ADB. Control the TV, manage apps and files, and inspect commands and diagnostics.</string>
+    <string name="not_connected">Not connected</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="pair">Wireless pairing</string>
+    <string name="scan_qr">Scan TV QR code</string>
+    <string name="discover">Discover LAN services</string>
+    <string name="connect_help">Use the same reachable LAN. Enable TV ADB debugging and its TCP port (usually 5555), then approve authorization on the TV. Android 11+ wireless debugging needs pairing first; pairing and connection ports differ.</string>
+    <string name="operation_failed">Operation failed</string>
+    <string name="close">Close</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm_destructive">This changes the TV. Continue?</string>
+    <string name="host">TV IP or hostname</string>
+    <string name="port">Connection port</string>
+    <string name="pairing_port">Pairing port</string>
+    <string name="pairing_code">Six-digit pairing code</string>
+    <string name="invalid_endpoint">Check host, ports and pairing code</string>
+    <string name="connecting">Connecting; approve authorization on the TV…</string>
+    <string name="connect_failed">Could not connect</string>
+    <string name="pair_failed">Pairing failed</string>
+    <string name="discovery_failed">LAN discovery failed</string>
+    <string name="files">Files</string>
+    <string name="apps">Apps</string>
+    <string name="remote">Remote</string>
+    <string name="shell">Shell</string>
+    <string name="tools">Tools</string>
+    <string name="loading">Loading…</string>
+    <string name="completed">Completed</string>
+    <string name="timeout">Operation timed out</string>
+    <string name="output_too_large">Output exceeds the display limit</string>
+    <string name="up">Parent</string>
+    <string name="refresh">Refresh</string>
+    <string name="upload">Upload</string>
+    <string name="download">Download</string>
+    <string name="new_folder">New folder</string>
+    <string name="open">Open</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="invalid_name">Invalid file name</string>
+    <string name="save">Save</string>
+    <string name="system_apps">System apps</string>
+    <string name="user_apps">User apps</string>
+    <string name="install">Install APK</string>
+    <string name="app_details">App details</string>
+    <string name="launch">Launch</string>
+    <string name="force_stop">Force stop</string>
+    <string name="clear_cache">Clear cache</string>
+    <string name="clear_data">Clear data</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="export_apk">Export APK</string>
+    <string name="split_export_notice">This app has split APKs. Download all listed files from Files to preserve the complete package.</string>
+    <string name="home">Home</string>
+    <string name="back">Back</string>
+    <string name="menu">Menu</string>
+    <string name="up_key">Up ↑</string>
+    <string name="left">Left ←</string>
+    <string name="ok">OK</string>
+    <string name="right">Right →</string>
+    <string name="down">Down ↓</string>
+    <string name="volume_down">Vol −</string>
+    <string name="volume_up">Vol +</string>
+    <string name="mute">Mute</string>
+    <string name="play_pause">Play / Pause</string>
+    <string name="rewind">Rewind</string>
+    <string name="forward">Forward</string>
+    <string name="more_keys">More keys</string>
+    <string name="power">Power</string>
+    <string name="input_source">Input</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="sync_keyboard">TV keyboard</string>
+    <string name="send">Send</string>
+    <string name="text_unsupported">No supported focused editor. Password fields cannot be read or changed.</string>
+    <string name="text_conflict">The TV text or focus changed. Close and reopen the keyboard to resync.</string>
+    <string name="keyboard_help">Reads the focused editor. Send checks the original text before replacing it, then confirms. Changes on the TV are never overwritten blindly.</string>
+    <string name="mouse">Mouse pad</string>
+    <string name="mouse_help">Slide to move the pointer. Tap to click.</string>
+    <string name="mouse_coordinate_help">Tap the corresponding position on the TV screen.</string>
+    <string name="mouse_two_finger_navigation">Swipe with two fingers to navigate. Hold after swiping left or right to keep moving.</string>
+    <string name="double_click">Double click</string>
+    <string name="middle_click">Middle click</string>
+    <string name="center_pointer">Center pointer</string>
+    <string name="right_click">Right click</string>
+    <string name="screen_preview">Connect screen preview</string>
+    <string name="preview_mode">Screenshot compatibility preview; refresh is limited by TV capture speed.</string>
+    <string name="stop_preview">Disconnect screen</string>
+    <string name="shell_hint">Command; runs only when Send is pressed</string>
+    <string name="presets">Presets</string>
+    <string name="clear">Clear</string>
+    <string name="screenshot">Screenshot</string>
+    <string name="capture_failed">TV did not return a valid image</string>
+    <string name="network">Network diagnostics</string>
+    <string name="device_info">Device information</string>
+    <string name="logs">Live Logcat</string>
+    <string name="record">Record screen</string>
+    <string name="open_tv_settings">Open TV settings</string>
+    <string name="reboot">Reboot TV</string>
+    <string name="camera_unavailable">Camera unavailable. Allow camera permission or add the TV manually.</string>
+<string name="pause">Pause</string><string name="resume">Resume</string>
+<string name="app_icon">App icon</string><string name="icon_neon">Neon</string><string name="icon_pearl">Pearl</string><string name="icon_changed">Icon updated; the launcher may take a moment to refresh.</string><string name="licenses">Third-party licenses</string>
+<string name="drag">Hold left button</string><string name="release_drag">Release left button</string><string name="scroll_up">Scroll up</string><string name="scroll_down">Scroll down</string>
+<string name="resync">Resync from TV</string><string name="keyboard_live">Live text sync; conflicts pause writes.</string>
+<string name="device_name">Device name</string><string name="device_group">Group</string><string name="device_note">Note</string><string name="edit_device">Edit device</string><string name="favorite">Favorite / Unfavorite</string><string name="connection_service">TV connection</string>
+<string name="upload_folder">Upload folder</string><string name="download_folder">Download folder</string><string name="download_selection">Download selection</string><string name="delete_selection">Delete selection</string><string name="replace_files">Existing destination files may be replaced. Continue?</string>
+<string name="apk_analysis">APK analysis</string><string name="install_history">Installation history</string><string name="obb_failed">The APK was installed, but OBB deployment failed. Check TV storage permissions.</string>
+<string name="install_success">Success</string><string name="install_failed">Failed</string><string name="no_install_history">No installation history</string>
+<string name="preview_connecting">Starting H.264 preview…</string><string name="preview_video">H.264 decoded preview</string>
+<string name="scan_lan">Scan local network</string><string name="scan_finished">LAN scan complete</string><string name="command_history">Session history</string><string name="command_favorites">Favorites</string><string name="save_favorite">Save favorite</string>
+<string name="stop_scan">Stop scan</string><string name="scanning_lan">Scanning local network…</string><string name="no_devices_found">No devices found</string><string name="retry">Retry</string>
+<string name="client_settings">Client settings</string><string name="language">Language</string><string name="appearance">Appearance</string><string name="follow_system">Follow system</string><string name="light">Light</string><string name="dark">Dark</string><string name="auto_connect">Connect to last device at launch</string><string name="replace_install">Replace existing app during install</string><string name="load_icons">Load application names and icons</string><string name="remote_recording">Open remote when recording starts</string>
+<string name="log_tag">Tag filter</string><string name="log_pid">PID filter</string><string name="all_levels">All levels</string><string name="developer_settings">Open developer options</string>
+<string name="scan_aerial_qr">Scan to open Aerial</string>
+<string name="aerial_scan_hint">Scan the phone management QR code shown by Aerial on your TV. Use the same trusted LAN.</string>
+<string name="invalid_aerial_qr">Not an Aerial management QR code. Scan the code displayed by Aerial.</string>
+<string name="aerial_open_failed">Cannot open Aerial. Check the QR code and make sure a web browser is installed.</string>
+<string name="aerial_not_installed">Aerial is not installed</string>
+<string name="aerial_checking">Checking Aerial installation…</string>
+<string name="aerial_install">Install Aerial</string>
+<string name="aerial_upgrade">Upgrade Aerial</string>
+<string name="aerial_downloading">Downloading official Aerial release…</string>
+<string name="aerial_installing">Installing Aerial…</string>
+<string name="aerial_current">The installed Aerial version is already current or newer.</string>
+<string name="aerial_installed">Aerial installed successfully.</string>
+<string name="aerial_guard_hint">Standard declares a Home launcher. Use Guard if your TV firmware rejects Home apps. Updates keep the installed edition.</string>
+<string name="aerial_install_hint">Downloads the latest stable official APK, then runs authorization and launch steps 3 and 6 from the installation guide. Preserves app data and existing notification listeners. Review each result; default Home and screensaver takeover are not configured.</string>
+<string name="aerial_detection_failed">Cannot detect Aerial. Check the ADB connection and retry.</string>
+<string name="aerial_download_failed">Aerial package verification failed. Nothing was installed.</string>
+<string name="aerial_device_changed">The device or Aerial edition changed. Reconnect and retry.</string>
+<string name="aerial_unknown">Aerial status not checked</string>
+<string name="aerial_address">Aerial phone page base address</string>
+<string name="aerial_configuring">Authorizing and starting Aerial…</string>
+<string name="aerial_configure">Authorize and start</string>
+<string name="aerial_retry_guard">Retry installation with Guard</string>
+<string name="aerial_setup_report">Aerial setup results</string>
+<string name="aerial_setup_complete">Authorization commands completed and Aerial started.</string>
+<string name="aerial_setup_partial">Aerial started. Some permissions failed or are unsupported; check the results.</string>
+<string name="aerial_launch_failed">Aerial launch was not confirmed. Check the results.</string>
+<string name="aerial_unsupported_sdk">Android versions below 4.0 (SDK 14) are not supported.</string>
+<string name="vpn_lan_help">If a VPN is active, allow local network access for TVDeck in its settings. System VPN lockdown policies may still block LAN connections. Use the TV’s numeric local IP address.</string>
+    <string name="local_network_devices">Local network devices</string>
+    <string name="my_tvs">My TVs</string>
+    <string name="no_devices_yet">No TVs saved yet. Scan the network or add a TV address.</string>
+    <string name="general">General</string>
+    <string name="visual_theme">Visual theme</string>
+    <string name="theme_standard">Standard</string>
+    <string name="theme_cyberpunk">Cyberpunk</string>
+    <string name="about">About</string>
+    <string name="remote_preferences">Remote preferences</string>
+    <string name="cyberpunk_theme_hint">Neon accents and luminous panels. Works with light, dark, or system appearance.</string>
+    <string name="current_location">Current location</string><string name="more">More</string><string name="folder">Folder</string><string name="folder_empty">This folder is empty</string><string name="no_search_results">No matching files</string><string name="search_files">Search this folder</string>
+    <string name="sort_by">Sort by</string><string name="sort_direction">Sort direction</string><string name="sort_name">Name</string><string name="sort_date">Date modified</string><string name="sort_size">Size</string><string name="ascending">Ascending</string><string name="descending">Descending</string>
+    <string name="app_filter_all">All apps</string><string name="app_filter_user">User apps</string><string name="app_filter_system">System apps</string>
+    <string name="no_apps_found">No matching apps</string>
+    <string name="aerial_check_update">Check Aerial updates</string><string name="aerial_update_available">A newer Aerial version is available. Tap Upgrade to install it.</string><string name="aerial_home_status">Home takeover status</string><string name="aerial_default_home">Default Home is Aerial</string><string name="aerial_home_guard">Home Guard enabled</string><string name="yes">Yes</string><string name="no">No</string>
+    <string name="shell_keywords">Shell keywords</string><string name="shell_ready">TVDeck shell ready. Commands run only after tapping Send.</string><string name="performance">Performance and storage</string>
+    <string name="screen_debugging">Screen and diagnostics</string><string name="device_management">TV settings</string><string name="risky_actions">Restart options</string><string name="remote_buttons">Button remote</string><string name="default_remote_mode">Default remote mode</string><string name="default_live_screen_control">Screen input mode</string><string name="touch_mode">Touch</string>
+    <string name="remote_screen">Screen</string>
+    <string name="remote_center">Remote center</string>
+    <string name="remote_input">Input</string>
+    <string name="remote_channel">Channel</string>
+    <string name="channel_empty">Enter a channel number</string>
+    <string name="remote_haptics">Remote haptics</string>
+    <string name="volume_unsupported">This TV does not report its volume range. The slider is unavailable.</string>
+    <string name="remote_volume">Volume</string><string name="remote_adjust_hint">Tap once or hold volume and channel keys to repeat. Release to stop.</string>
+    <string name="channel_up">Channel up</string>
+    <string name="channel_down">Channel down</string>
+    <string name="number_pad">Number pad</string>
+    <string name="remote_delete">Delete</string>
+    <string name="keyboard_confirm">Enter</string>
+    <string name="install_formats_hint">Supports APK, APKS, XAPK, and APKM</string>
+    <string name="app_name_label">App name</string><string name="package_name_label">Package name</string><string name="permissions_label">Permissions</string><string name="none">None</string>
+    <string name="app_type">Type</string><string name="app_version">Version</string><string name="apk_path_label">APK path</string>
+    <string name="connected">Connected</string>
+<string name="reconnecting_attempt">Reconnecting (%1$d/%2$d)…</string>
+<string name="retry_video_preview">Retry high-performance preview (H.264)</string>
+<string name="preview_no_data">No video data received. Check the TV screenrecord support and connection.</string>
+<string name="preview_invalid_data">Received %1$d bytes without valid H.264 headers. The TV may have rejected recording.</string>
+<string name="preview_first_frame_timeout">H.264 headers received, but no decoded frame arrived before the startup timeout.</string>
+<string name="preview_stream_ended">The TV stopped the H.264 stream before a frame could be decoded.</string>
+<string name="preview_decode_failed">Video decoder failed: %1$s</string>
+    <string name="preview_touch">Touch control</string>
+    <string name="preview_zoom">Enlarge preview</string>
+    <string name="preview_reset_zoom">Reset zoom</string>
+    <string name="preview_fullscreen">Enter full screen</string>
+    <string name="preview_exit_fullscreen">Exit full screen</string>
+    <string name="preview_show_controls">Show screen controls</string>
+    <string name="preview_hide_controls">Hide screen controls</string>
+    <string name="preview_orientation">Screen orientation</string>
+    <string name="preview_orientation_auto">Automatic</string>
+    <string name="preview_orientation_portrait">Portrait</string>
+    <string name="preview_orientation_landscape">Landscape</string>
+    <string name="preview_gesture_help">Pinch to zoom (1–4×), drag with two fingers to move the view. One finger controls the TV.</string>
+    <string name="preview_mouse">Mouse control</string>
+    <string name="scan_connection_qr">Scan TV or Aerial QR</string>
+    <string name="scan_connection_qr_hint">Scan a TV connection QR or the Aerial management QR shown on the TV.</string>
+    <string name="invalid_connection_qr">Not a valid TV connection or Aerial QR.</string>
+    <string name="legal_title">Terms of Use and Risk Notice</string>
+    <string name="legal_version">Notice version</string>
+    <string name="legal_region">Notice region</string>
+    <string name="legal_mainland">Mainland China</string>
+    <string name="legal_international">Outside mainland China</string>
+    <string name="legal_language">Notice language</string>
+    <string name="legal_intro">This tool manages Android devices through ADB. Read the following terms, particularly the data risks, security permissions, and limits of responsibility. You may request clarification through the project feedback link below.</string>
+    <string name="legal_scope_title">1. Authorization and lawful use</string>
+    <string name="legal_scope">Access only devices you own or have explicit permission to manage, and comply with applicable law. Do not use this tool to access or interfere with devices without authorization or infringe the data, privacy, or other rights of others. Confirm the target device, files, and applications before acting.</string>
+    <string name="legal_risk_title">2. Data loss and device risks</string>
+    <string name="legal_risk">Deleting files, clearing app data, uninstalling or installing software, running Shell commands, rebooting, and changing device settings may cause data loss, application failures, or changes to device functions. Some actions cannot be undone through this tool. Back up important data, understand the consequences, and follow the operation prompts. A timeout does not establish that an action failed to execute. Check the device before retrying.</string>
+    <string name="legal_security_title">3. ADB security and permissions</string>
+    <string name="legal_security">ADB authorization may allow reading device information, transferring files, and executing management commands. Use trusted networks, grant persistent debugging access cautiously, and protect pairing information and connection credentials. Revoke debugging authorization on the device when no longer needed. Do not expose debugging ports or credentials to untrusted parties.</string>
+    <string name="legal_compatibility_title">4. Compatibility and third-party software</string>
+    <string name="legal_compatibility">Device software, manufacturer restrictions, permissions, and network conditions affect functionality. Verify the results of important operations. Third-party applications, download sources, and services may have separate terms and licenses. Check their sources and permissions before installation or use. This notice does not replace open-source licenses or any separately provided privacy notice.</string>
+    <string name="legal_rights_title">5. Liability and your rights</string>
+    <string name="legal_rights_cn">To the extent permitted by law, this tool is provided as is, without a guarantee of compatibility with every device or uninterrupted or error-free operation. Responsibility for losses involving unauthorized use, failure to follow clear operation prompts, or third-party causes is determined under applicable law, the facts, causation, and each party’s fault. This notice does not exempt the developer from legally required liability. It does not exclude liability for personal injury or property loss caused intentionally or through gross negligence. Your statutory rights and available legal remedies remain protected. Mandatory provisions of applicable law prevail.</string>
+    <string name="legal_rights_intl">To the extent permitted by applicable law, this tool is provided as is and as available, without a guarantee of compatibility with every device, continuous availability, or error-free operation. Warranties, compensation, and other liability are determined under applicable law and the relevant facts. Nothing in this notice excludes, restricts, or modifies consumer rights, statutory guarantees, remedies, or liabilities that cannot lawfully be excluded, restricted, or modified. These may include guarantees of acceptable quality, fitness for purpose, and reasonable care and skill, where applicable. Mandatory provisions of applicable law prevail over conflicting terms.</string>
+    <string name="legal_acceptance_title">6. Acceptance, versions, and records</string>
+    <string name="legal_acceptance">Before agreeing, you can read all terms, change the notice language, or decline. Selecting the acknowledgment and Agree and Continue signifies acceptance of the version displayed. This device stores the notice version, detected system region, language, and acceptance time for later reference. Material updates require renewed agreement. If you decline, this tool remains on the notice screen without device connections or operations.</string>
+    <string name="legal_ack">I have read and understood this notice, particularly the data risks, security permissions, and limits of responsibility, and agree to this version.</string>
+    <string name="legal_agree">Agree and Continue</string>
+    <string name="legal_decline">Decline</string>
+    <string name="legal_declined">You have not agreed. Device connections and operations are unavailable. You can continue reading and reconsider.</string>
+    <string name="legal_feedback">Clarification and project feedback</string>
+    <string name="legal_required">Open the app to read and agree to the notice first.</string>
+    <string name="legal_store_failed">Could not save your agreement. Please try again.</string>
+    <string name="legal_record_hint">Accepted version, region, and language</string>
+    <string name="aerial_consent_install_title">Aerial installation notice</string>
+    <string name="aerial_consent_configure_title">Aerial authorization notice</string>
+    <string name="aerial_consent_target">Target TV</string>
+    <string name="aerial_consent_edition">Edition</string>
+    <string name="aerial_consent_install_body">This operation downloads the latest stable Aerial APK from its official GitHub repository, installs or upgrades it on the target TV, grants the permissions listed below, and launches Aerial. Confirm that you are authorized to manage this TV. Installation or device failures may affect use; back up important data before upgrading.</string>
+    <string name="aerial_consent_configure_body">This operation uses ADB to grant the permissions listed below to Aerial already installed on the target TV, then launches it. Confirm that you are authorized to manage this TV.</string>
+    <string name="aerial_consent_permissions">Aerial will be granted or allowed to request access to location, secure and system settings, overlays, installation of other apps, app usage, notifications, and automatic or associated startup. The operation also attempts to allow restricted settings where supported. These permissions are granted to Aerial on the TV and may persist after this operation. Uninstall Aerial or follow its official instructions to revoke the relevant permissions when no longer needed.</string>
+    <string name="aerial_consent_permissions_lite">Aerial Lite will be granted permission to write secure settings, allowing it to change system configuration on the TV. This permission may persist after the operation. Uninstall Aerial Lite or follow its official instructions to revoke this permission when no longer needed.</string>
+    <string name="aerial_consent_source">Official source: https://github.com/pengchujin/aerial-tv</string>
+    <string name="aerial_consent_result">Permission support depends on the TV firmware. The authorization and launch results are shown after execution. Continue only if you understand and accept these changes.</string>
+    <string name="aerial_consent_install_agree">Agree, Install and Authorize</string>
+    <string name="aerial_consent_configure_agree">Agree and Authorize</string>
+</resources>

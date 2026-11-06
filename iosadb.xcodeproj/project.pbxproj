@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+ B94000000000000000000001 = {isa = PBXBuildFile; fileRef = B94000000000000000000002; };
+ B93000000000000000000031 = {isa = PBXBuildFile; fileRef = B93000000000000000000032; };
+ B93000000000000000000021 = {isa = PBXBuildFile; fileRef = B93000000000000000000022; };
+ B93000000000000000000011 = {isa = PBXBuildFile; fileRef = B93000000000000000000012; };
+ B93000000000000000000001 = {isa = PBXBuildFile; fileRef = B93000000000000000000002; };
+ B92000000000000000000001 = {isa = PBXBuildFile; fileRef = B92000000000000000000002; };
+        B91000000000000000000001 = {isa = PBXBuildFile; fileRef = B91000000000000000000002; };
+        B90000000000000000000001 = {isa = PBXBuildFile; fileRef = B90000000000000000000002; };
+        B80000000000000000000001 = {isa = PBXBuildFile; fileRef = B80000000000000000000002; };
+        B70000000000000000000001 = {isa = PBXBuildFile; fileRef = B70000000000000000000002; };
+        B60200000000000000000001 = {isa = PBXBuildFile; fileRef = B60200000000000000000002; };
+        B60100000000000000000001 = {isa = PBXBuildFile; fileRef = B60100000000000000000002; };
+        B50000000000000000000001 = {isa = PBXBuildFile; fileRef = B50000000000000000000002; };
+        B40500000000000000000001 = {isa = PBXBuildFile; fileRef = B40500000000000000000002; };
+        B40400000000000000000001 = {isa = PBXBuildFile; fileRef = B40400000000000000000002; };
+        B40300000000000000000001 = {isa = PBXBuildFile; fileRef = B40300000000000000000002; };
+        B40200000000000000000001 = {isa = PBXBuildFile; fileRef = B40200000000000000000002; };
+        B40100000000000000000001 = {isa = PBXBuildFile; fileRef = B40100000000000000000002; };
+        B30000000000000000000001 = {isa = PBXBuildFile; fileRef = B30000000000000000000002; };
+        B61000000000000000000001 = {isa = PBXBuildFile; fileRef = B61000000000000000000002; };
+        B20000000000000000000001 = {isa = PBXBuildFile; fileRef = B20000000000000000000002; };
+		A00000000000000000000101 /* IOSADBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000201 /* IOSADBApp.swift */; };
+		A00000000000000000000102 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000202 /* AppModel.swift */; };
+		A00000000000000000000103 /* RemoteFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000203 /* RemoteFile.swift */; };
+		A00000000000000000000104 /* Data+ADB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000204 /* Data+ADB.swift */; };
+		A00000000000000000000105 /* ADBPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000205 /* ADBPacket.swift */; };
+		A00000000000000000000106 /* ADBKeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000206 /* ADBKeyStore.swift */; };
+		A00000000000000000000107 /* ADBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000207 /* ADBClient.swift */; };
+		A00000000000000000000108 /* ADBSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000208 /* ADBSyncService.swift */; };
+		A00000000000000000000109 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000209 /* RootView.swift */; };
+		A9B000000000000000000007 /* UsageNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B000000000000000000008 /* UsageNoticeView.swift */; };
+		A0000000000000000000010A /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020A /* ConnectionView.swift */; };
+		A0000000000000000000010B /* FileBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020B /* FileBrowserView.swift */; };
+		A0000000000000000000010C /* Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020C /* Resources/Assets.xcassets */; };
+		A0000000000000000000010D /* DeviceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000020F /* DeviceRecord.swift */; };
+		A0000000000000000000010E /* AndroidModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000210 /* AndroidModels.swift */; };
+		A0000000000000000000010F /* DeviceDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000211 /* DeviceDiscovery.swift */; };
+		A00000000000000000000110 /* ADBCommandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000212 /* ADBCommandService.swift */; };
+		A00000000000000000000111 /* DeviceHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000213 /* DeviceHomeView.swift */; };
+		A00000000000000000000112 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000214 /* MainTabView.swift */; };
+		A00000000000000000000113 /* ApplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000215 /* ApplicationsView.swift */; };
+		A00000000000000000000114 /* RemoteControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000216 /* RemoteControlView.swift */; };
+		A00000000000000000000115 /* ShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000217 /* ShellView.swift */; };
+		A00000000000000000000116 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000218 /* ToolsView.swift */; };
+		A00000000000000000000117 /* ZipArchiveReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000219 /* ZipArchiveReader.swift */; };
+		A9B000000000000000000001 /* ADBHeartbeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B000000000000000000002 /* ADBHeartbeat.swift */; };
+		A9B000000000000000000005 /* UsageConsent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B000000000000000000006 /* UsageConsent.swift */; };
+		A9B000000000000000000003 /* MouseMotionAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B000000000000000000004 /* MouseMotionAccumulator.swift */; };
+		A00000000000000000000118 /* ADBMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021A /* ADBMobileClient.swift */; };
+		A00000000000000000000119 /* ADBMobileShim.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000021B /* ADBMobileShim.mm */; };
+		A0000000000000000000011A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000407 /* Localizable.strings */; };
+		A0000000000000000000011B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000408 /* InfoPlist.strings */; };
+		A0000000000000000000011C /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000222 /* DesignSystem.swift */; };
+		A0000000000000000000011D /* APKInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000223 /* APKInspector.swift */; };
+		A0000000000000000000011E /* Resources/TVADBIconHelper.dex in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000224 /* Resources/TVADBIconHelper.dex */; };
+		A0000000000000000000011F /* ScreenRecordingRecovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000225 /* ScreenRecordingRecovery.swift */; };
+		A00000000000000000000120 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000226 /* SettingsView.swift */; };
+		A00000000000000000000121 /* Resources/AndroidUInput/TVADBVirtualMouse-arm64.bin in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000227 /* Resources/AndroidUInput/TVADBVirtualMouse-arm64.bin */; };
+		A00000000000000000000122 /* Resources/AndroidUInput/TVADBVirtualMouse-armv7.bin in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000228 /* Resources/AndroidUInput/TVADBVirtualMouse-armv7.bin */; };
+		A00000000000000000000123 /* Resources/AndroidUInput/TVADBVirtualMouse-x86.bin in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000229 /* Resources/AndroidUInput/TVADBVirtualMouse-x86.bin */; };
+		A00000000000000000000124 /* Resources/AndroidUInput/TVADBVirtualMouse-x86_64.bin in Resources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022A /* Resources/AndroidUInput/TVADBVirtualMouse-x86_64.bin */; };
+		A00000000000000000000125 /* H264StreamDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022B /* H264StreamDecoder.swift */; };
+		A00000000000000000000126 /* H264VideoSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000022C /* H264VideoSurface.swift */; };
+		B10000000000000000000001 /* RemoteTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* RemoteTextInput.swift */; };
+C1000000000000000000001E = {isa = PBXBuildFile; fileRef = C1000000000000000000000A; };
+C1000000000000000000001F = {isa = PBXBuildFile; fileRef = C1000000000000000000000B; };
+C10000000000000000000020 = {isa = PBXBuildFile; fileRef = C1000000000000000000000C; };
+C10000000000000000000021 = {isa = PBXBuildFile; fileRef = C1000000000000000000000A; };
+C10000000000000000000022 = {isa = PBXBuildFile; fileRef = C1000000000000000000000B; };
+C10000000000000000000023 = {isa = PBXBuildFile; fileRef = C1000000000000000000000D; };
+C10000000000000000000024 = {isa = PBXBuildFile; fileRef = A00000000000000000000407; };
+C10000000000000000000025 = {isa = PBXBuildFile; fileRef = C10000000000000000000014; settings = {ATTRIBUTES = (RemoveHeadersOnCopy,); }; };
+D30000000000000000000010 = {isa = PBXBuildFile; fileRef = D30000000000000000000000; };
+D30000000000000000000011 = {isa = PBXBuildFile; fileRef = D30000000000000000000001; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+ B94000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerialIntegration.swift; sourceTree = "<group>"; };
+ B93000000000000000000032 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resources/Pearl83x83@2x.png"; sourceTree = "<group>"; };
+ B93000000000000000000022 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resources/Pearl76x76@2x.png"; sourceTree = "<group>"; };
+ B93000000000000000000012 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resources/Pearl60x60@3x.png"; sourceTree = "<group>"; };
+ B93000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resources/Pearl60x60@2x.png"; sourceTree = "<group>"; };
+ B92000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+        B91000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVADBQREndpoint.swift; sourceTree = "<group>"; };
+        B90000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualTheme.swift; sourceTree = "<group>"; };
+        B80000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
+        B70000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellCommandCatalog.swift; sourceTree = "<group>"; };
+        B60200000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCenterPanel.swift; sourceTree = "<group>"; };
+        B60100000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVRemoteKey.swift; sourceTree = "<group>"; };
+        B50000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestFrameBuffer.swift; sourceTree = "<group>"; };
+        B40500000000000000000002 = {isa = PBXFileReference; lastKnownFileType = file; path = Resources/TVADBTextSync.dex; sourceTree = "<group>"; };
+        B40400000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteKeyboardPanel.swift; sourceTree = "<group>"; };
+        B40300000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteKeyboardSync.swift; sourceTree = "<group>"; };
+        B40200000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTextSession.swift; sourceTree = "<group>"; };
+        B40100000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEditorProtocol.swift; sourceTree = "<group>"; };
+        B30000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = file; path = Resources/TVADBRemoteKeys.dex; sourceTree = "<group>"; };
+        B61000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = file; path = Resources/TVADBVideoStream.dex; sourceTree = "<group>"; };
+        B20000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalKeyRepeater.swift; sourceTree = "<group>"; };
+		A00000000000000000000201 /* IOSADBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSADBApp.swift; sourceTree = "<group>"; };
+		A00000000000000000000202 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		A00000000000000000000203 /* RemoteFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFile.swift; sourceTree = "<group>"; };
+		A00000000000000000000204 /* Data+ADB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ADB.swift"; sourceTree = "<group>"; };
+		A00000000000000000000205 /* ADBPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBPacket.swift; sourceTree = "<group>"; };
+		A00000000000000000000206 /* ADBKeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBKeyStore.swift; sourceTree = "<group>"; };
+		A00000000000000000000207 /* ADBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBClient.swift; sourceTree = "<group>"; };
+		A00000000000000000000208 /* ADBSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBSyncService.swift; sourceTree = "<group>"; };
+		A00000000000000000000209 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A9B000000000000000000008 /* UsageNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageNoticeView.swift; sourceTree = "<group>"; };
+		A0000000000000000000020A /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		A0000000000000000000020B /* FileBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBrowserView.swift; sourceTree = "<group>"; };
+		A0000000000000000000020C /* Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		A0000000000000000000020D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0000000000000000000020E /* TVADB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVADB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0000000000000000000020F /* DeviceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRecord.swift; sourceTree = "<group>"; };
+		A00000000000000000000210 /* AndroidModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndroidModels.swift; sourceTree = "<group>"; };
+		A00000000000000000000211 /* DeviceDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDiscovery.swift; sourceTree = "<group>"; };
+		A00000000000000000000212 /* ADBCommandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBCommandService.swift; sourceTree = "<group>"; };
+		A00000000000000000000213 /* DeviceHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHomeView.swift; sourceTree = "<group>"; };
+		A00000000000000000000214 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A00000000000000000000215 /* ApplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000216 /* RemoteControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlView.swift; sourceTree = "<group>"; };
+		A00000000000000000000217 /* ShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellView.swift; sourceTree = "<group>"; };
+		A00000000000000000000218 /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000219 /* ZipArchiveReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipArchiveReader.swift; sourceTree = "<group>"; };
+		A9B000000000000000000002 /* ADBHeartbeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBHeartbeat.swift; sourceTree = "<group>"; };
+		A9B000000000000000000006 /* UsageConsent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageConsent.swift; sourceTree = "<group>"; };
+		A9B000000000000000000004 /* MouseMotionAccumulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MouseMotionAccumulator.swift; sourceTree = "<group>"; };
+		A0000000000000000000021A /* ADBMobileClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBMobileClient.swift; sourceTree = "<group>"; };
+		A0000000000000000000021B /* ADBMobileShim.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ADBMobileShim.mm; sourceTree = "<group>"; };
+		A0000000000000000000021C /* ADBMobileShim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADBMobileShim.h; sourceTree = "<group>"; };
+		A0000000000000000000021D /* TVADB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TVADB-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0000000000000000000021E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A0000000000000000000021F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A00000000000000000000220 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A00000000000000000000221 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A00000000000000000000222 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		A00000000000000000000223 /* APKInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APKInspector.swift; sourceTree = "<group>"; };
+		A00000000000000000000224 /* Resources/TVADBIconHelper.dex */ = {isa = PBXFileReference; lastKnownFileType = file; path = Resources/TVADBIconHelper.dex; sourceTree = "<group>"; };
+		A00000000000000000000225 /* ScreenRecordingRecovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRecordingRecovery.swift; sourceTree = "<group>"; };
+		A00000000000000000000226 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A00000000000000000000227 /* Resources/AndroidUInput/TVADBVirtualMouse-arm64.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "Resources/AndroidUInput/TVADBVirtualMouse-arm64.bin"; sourceTree = "<group>"; };
+		A00000000000000000000228 /* Resources/AndroidUInput/TVADBVirtualMouse-armv7.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "Resources/AndroidUInput/TVADBVirtualMouse-armv7.bin"; sourceTree = "<group>"; };
+		A00000000000000000000229 /* Resources/AndroidUInput/TVADBVirtualMouse-x86.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "Resources/AndroidUInput/TVADBVirtualMouse-x86.bin"; sourceTree = "<group>"; };
+		A0000000000000000000022A /* Resources/AndroidUInput/TVADBVirtualMouse-x86_64.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "Resources/AndroidUInput/TVADBVirtualMouse-x86_64.bin"; sourceTree = "<group>"; };
+		A0000000000000000000022B /* H264StreamDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264StreamDecoder.swift; sourceTree = "<group>"; };
+		A0000000000000000000022C /* H264VideoSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264VideoSurface.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* RemoteTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTextInput.swift; sourceTree = "<group>"; };
+C1000000000000000000000A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetShared/WidgetRemoteState.swift; sourceTree = SOURCE_ROOT; };
+C1000000000000000000000B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetShared/TVRemoteWidgetIntent.swift; sourceTree = SOURCE_ROOT; };
+C1000000000000000000000C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosadb/Core/WidgetRemoteController.swift; sourceTree = SOURCE_ROOT; };
+C1000000000000000000000D = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVADBWidget/TVADBWidget.swift; sourceTree = SOURCE_ROOT; };
+C1000000000000000000000E = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TVADBWidget/Info.plist; sourceTree = SOURCE_ROOT; };
+C1000000000000000000000F = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TVADBWidget/TVADBWidget.entitlements; sourceTree = SOURCE_ROOT; };
+C10000000000000000000010 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosadb/TVADB.entitlements; sourceTree = SOURCE_ROOT; };
+C10000000000000000000014 = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; path = TVADBWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+D30000000000000000000000 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LANScanEligibility.swift; sourceTree = "<group>"; };
+D30000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationActionsMenu.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00000000000000000000301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+C10000000000000000000034 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000000000000000000401 = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000402 /* iosadb */,
+				A00000000000000000000406 /* Products */,
+C10000000000000000000028,
+			);
+			sourceTree = "<group>";
+		};
+		A00000000000000000000402 /* iosadb */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000201 /* IOSADBApp.swift */,
+				A0000000000000000000021D /* TVADB-Bridging-Header.h */,
+				A00000000000000000000403 /* Core */,
+				A00000000000000000000404 /* Models */,
+				A00000000000000000000405 /* UI */,
+				A0000000000000000000020C /* Resources/Assets.xcassets */,
+				A00000000000000000000224 /* Resources/TVADBIconHelper.dex */,
+                B40500000000000000000002,
+                B30000000000000000000002,
+                B61000000000000000000002,
+				A00000000000000000000227 /* Resources/AndroidUInput/TVADBVirtualMouse-arm64.bin */,
+				A00000000000000000000228 /* Resources/AndroidUInput/TVADBVirtualMouse-armv7.bin */,
+				A00000000000000000000229 /* Resources/AndroidUInput/TVADBVirtualMouse-x86.bin */,
+				A0000000000000000000022A /* Resources/AndroidUInput/TVADBVirtualMouse-x86_64.bin */,
+				A00000000000000000000407 /* Localizable.strings */,
+				A00000000000000000000408 /* InfoPlist.strings */,
+				A0000000000000000000020D /* Info.plist */,
+ B93000000000000000000032,
+ B93000000000000000000022,
+ B93000000000000000000012,
+ B93000000000000000000002,
+ B92000000000000000000002,
+			);
+			path = iosadb;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000403 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+                D30000000000000000000000,
+				A00000000000000000000204 /* Data+ADB.swift */,
+				A00000000000000000000205 /* ADBPacket.swift */,
+				A00000000000000000000206 /* ADBKeyStore.swift */,
+				A00000000000000000000207 /* ADBClient.swift */,
+				A00000000000000000000208 /* ADBSyncService.swift */,
+				A00000000000000000000211 /* DeviceDiscovery.swift */,
+                B91000000000000000000002,
+                B94000000000000000000002,
+				A00000000000000000000212 /* ADBCommandService.swift */,
+                B70000000000000000000002,
+                B60100000000000000000002,
+                B50000000000000000000002,
+                B40200000000000000000002,
+                B40100000000000000000002,
+                B20000000000000000000002,
+				B10000000000000000000002 /* RemoteTextInput.swift */,
+				A00000000000000000000225 /* ScreenRecordingRecovery.swift */,
+				A00000000000000000000219 /* ZipArchiveReader.swift */,
+				A00000000000000000000223 /* APKInspector.swift */,
+				A9B000000000000000000002 /* ADBHeartbeat.swift */,
+				A9B000000000000000000006 /* UsageConsent.swift */,
+				A9B000000000000000000004 /* MouseMotionAccumulator.swift */,
+				A0000000000000000000021A /* ADBMobileClient.swift */,
+				A0000000000000000000021B /* ADBMobileShim.mm */,
+				A0000000000000000000021C /* ADBMobileShim.h */,
+				A0000000000000000000022B /* H264StreamDecoder.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000404 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000202 /* AppModel.swift */,
+                B40300000000000000000002,
+				A00000000000000000000203 /* RemoteFile.swift */,
+				A0000000000000000000020F /* DeviceRecord.swift */,
+				A00000000000000000000210 /* AndroidModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000405 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+                D30000000000000000000001,
+				A00000000000000000000222 /* DesignSystem.swift */,
+				A0000000000000000000022C /* H264VideoSurface.swift */,
+				A00000000000000000000209 /* RootView.swift */,
+				A9B000000000000000000008 /* UsageNoticeView.swift */,
+				A0000000000000000000020A /* ConnectionView.swift */,
+				A0000000000000000000020B /* FileBrowserView.swift */,
+				A00000000000000000000213 /* DeviceHomeView.swift */,
+				A00000000000000000000214 /* MainTabView.swift */,
+				A00000000000000000000215 /* ApplicationsView.swift */,
+				A00000000000000000000216 /* RemoteControlView.swift */,
+                B90000000000000000000002,
+                B80000000000000000000002,
+                B60200000000000000000002,
+                B40400000000000000000002,
+				A00000000000000000000217 /* ShellView.swift */,
+				A00000000000000000000218 /* ToolsView.swift */,
+				A00000000000000000000226 /* SettingsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000406 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000020E /* TVADB.app */,
+C10000000000000000000014,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+C10000000000000000000028 = {isa = PBXGroup; children = (C1000000000000000000000A,C1000000000000000000000B,C1000000000000000000000C,C1000000000000000000000D,C1000000000000000000000E,C1000000000000000000000F,C10000000000000000000010); name = "Widget Remote"; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+C10000000000000000000035 = {isa = PBXCopyFilesBuildPhase; buildActionMask = 2147483647; dstPath = ""; dstSubfolderSpec = 13; files = (C10000000000000000000025,); name = "Embed App Extensions"; runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+C10000000000000000000036 = {isa = PBXContainerItemProxy; containerPortal = A00000000000000000000701; proxyType = 1; remoteGlobalIDString = C1000000000000000000003C; remoteInfo = TVADBWidget; };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+C10000000000000000000037 = {isa = PBXTargetDependency; target = C1000000000000000000003C; targetProxy = C10000000000000000000036; };
+/* End PBXTargetDependency section */
+
+/* Begin PBXNativeTarget section */
+		A00000000000000000000501 /* TVADB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00000000000000000000802 /* Build configuration list for PBXNativeTarget "TVADB" */;
+			buildPhases = (
+				A00000000000000000000603 /* Prepare ADB Prebuilt Library */,
+				A00000000000000000000601 /* Sources */,
+				A00000000000000000000301 /* Frameworks */,
+				A00000000000000000000602 /* Resources */,
+C10000000000000000000035,
+			);
+			buildRules = (
+			);
+			dependencies = (
+C10000000000000000000037,
+			);
+			name = TVADB;
+			productName = TVADB;
+			productReference = A0000000000000000000020E /* TVADB.app */;
+			productType = "com.apple.product-type.application";
+		};
+C1000000000000000000003C = {isa = PBXNativeTarget; buildConfigurationList = C1000000000000000000003D; buildPhases = (C10000000000000000000032,C10000000000000000000034,C10000000000000000000033,); buildRules = (); dependencies = (); name = TVADBWidget; productName = TVADBWidget; productReference = C10000000000000000000014; productType = "com.apple.product-type.app-extension"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00000000000000000000701 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					A00000000000000000000501 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = A00000000000000000000801 /* Build configuration list for PBXProject "iosadb" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+				Base,
+			);
+			mainGroup = A00000000000000000000401;
+			productRefGroup = A00000000000000000000406 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00000000000000000000501 /* TVADB */,
+C1000000000000000000003C,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000000000000000000602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000000000000000000010C /* Resources/Assets.xcassets in Resources */,
+				A0000000000000000000011A /* Localizable.strings in Resources */,
+ B93000000000000000000031,
+ B93000000000000000000021,
+ B93000000000000000000011,
+ B93000000000000000000001,
+ B92000000000000000000001,
+				A0000000000000000000011B /* InfoPlist.strings in Resources */,
+				A0000000000000000000011E /* Resources/TVADBIconHelper.dex in Resources */,
+                B40500000000000000000001,
+                B30000000000000000000001,
+                B61000000000000000000001,
+				A00000000000000000000121 /* Resources/AndroidUInput/TVADBVirtualMouse-arm64.bin in Resources */,
+				A00000000000000000000122 /* Resources/AndroidUInput/TVADBVirtualMouse-armv7.bin in Resources */,
+				A00000000000000000000123 /* Resources/AndroidUInput/TVADBVirtualMouse-x86.bin in Resources */,
+				A00000000000000000000124 /* Resources/AndroidUInput/TVADBVirtualMouse-x86_64.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+C10000000000000000000033 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (C10000000000000000000024,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A00000000000000000000603 /* Prepare ADB Prebuilt Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Vendor/adb-prebuilt/libadb-full-iphoneos-arm64.zip",
+                "$(SRCROOT)/Vendor/adb-prebuilt/libadb-full-iphonesimulator-arm64.zip",
+                "$(SRCROOT)/Vendor/adb-prebuilt/libadb-full-iphonesimulator-x86_64.zip",
+			);
+			name = "Prepare ADB Prebuilt Library";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "for adb_arch in ${ARCHS}; do\n  \"${SRCROOT}/scripts/prepare-adb-prebuilt.sh\" \"${PLATFORM_NAME}\" \"${adb_arch}\"\ndone\n";
+                alwaysOutOfDate = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00000000000000000000601 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+                D30000000000000000000011,
+                D30000000000000000000010,
+				A00000000000000000000101 /* IOSADBApp.swift in Sources */,
+C1000000000000000000001E,C1000000000000000000001F,C10000000000000000000020,
+				A00000000000000000000102 /* AppModel.swift in Sources */,
+				A00000000000000000000103 /* RemoteFile.swift in Sources */,
+				A00000000000000000000104 /* Data+ADB.swift in Sources */,
+				A00000000000000000000105 /* ADBPacket.swift in Sources */,
+				A00000000000000000000106 /* ADBKeyStore.swift in Sources */,
+				A00000000000000000000107 /* ADBClient.swift in Sources */,
+				A00000000000000000000108 /* ADBSyncService.swift in Sources */,
+				A00000000000000000000109 /* RootView.swift in Sources */,
+				A9B000000000000000000007 /* UsageNoticeView.swift in Sources */,
+				A0000000000000000000010A /* ConnectionView.swift in Sources */,
+				A0000000000000000000010B /* FileBrowserView.swift in Sources */,
+				A0000000000000000000010D /* DeviceRecord.swift in Sources */,
+				A0000000000000000000010E /* AndroidModels.swift in Sources */,
+				A0000000000000000000010F /* DeviceDiscovery.swift in Sources */,
+				A00000000000000000000110 /* ADBCommandService.swift in Sources */,
+                B90000000000000000000001,
+                B80000000000000000000001,
+                B70000000000000000000001,
+                B60200000000000000000001,
+                B60100000000000000000001,
+                B50000000000000000000001,
+                B40400000000000000000001,
+                B40300000000000000000001,
+                B40200000000000000000001,
+                B40100000000000000000001,
+                B20000000000000000000001,
+				B10000000000000000000001 /* RemoteTextInput.swift in Sources */,
+				A0000000000000000000011F /* ScreenRecordingRecovery.swift in Sources */,
+				A00000000000000000000111 /* DeviceHomeView.swift in Sources */,
+                B91000000000000000000001,
+                B94000000000000000000001,
+				A00000000000000000000112 /* MainTabView.swift in Sources */,
+				A00000000000000000000113 /* ApplicationsView.swift in Sources */,
+				A00000000000000000000114 /* RemoteControlView.swift in Sources */,
+				A00000000000000000000115 /* ShellView.swift in Sources */,
+				A00000000000000000000116 /* ToolsView.swift in Sources */,
+				A00000000000000000000120 /* SettingsView.swift in Sources */,
+				A00000000000000000000117 /* ZipArchiveReader.swift in Sources */,
+				A9B000000000000000000001 /* ADBHeartbeat.swift in Sources */,
+				A9B000000000000000000005 /* UsageConsent.swift in Sources */,
+				A9B000000000000000000003 /* MouseMotionAccumulator.swift in Sources */,
+				A00000000000000000000118 /* ADBMobileClient.swift in Sources */,
+				A00000000000000000000119 /* ADBMobileShim.mm in Sources */,
+				A0000000000000000000011C /* DesignSystem.swift in Sources */,
+				A0000000000000000000011D /* APKInspector.swift in Sources */,
+				A00000000000000000000125 /* H264StreamDecoder.swift in Sources */,
+				A00000000000000000000126 /* H264VideoSurface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+C10000000000000000000032 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (C10000000000000000000021,C10000000000000000000022,C10000000000000000000023,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A00000000000000000000407 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0000000000000000000021E /* en */,
+				A0000000000000000000021F /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A00000000000000000000408 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A00000000000000000000220 /* en */,
+				A00000000000000000000221 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A00000000000000000000901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+                TVADB_APP_GROUP = group.com.tvadb.ios;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A00000000000000000000902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+                TVADB_APP_GROUP = group.com.tvadb.ios;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A00000000000000000000903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconCyberpunk;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 25A4T2SB4Q;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Vendor/adb-public/include";
+				INFOPLIST_FILE = iosadb/Info.plist;
+                CODE_SIGN_ENTITLEMENTS = iosadb/TVADB.entitlements;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Vendor/adb-mobile/output/$(PLATFORM_NAME)/$(CURRENT_ARCH)";
+				MARKETING_VERSION = 1.3;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ladb-full",
+					"-lz",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvadb.ios;
+				PRODUCT_NAME = TVADB;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iosadb/TVADB-Bridging-Header.h";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A00000000000000000000904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconCyberpunk;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 25A4T2SB4Q;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Vendor/adb-public/include";
+				INFOPLIST_FILE = iosadb/Info.plist;
+                CODE_SIGN_ENTITLEMENTS = iosadb/TVADB.entitlements;
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Vendor/adb-mobile/output/$(PLATFORM_NAME)/$(CURRENT_ARCH)";
+				MARKETING_VERSION = 1.3;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ladb-full",
+					"-lz",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tvadb.ios;
+				PRODUCT_NAME = TVADB;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iosadb/TVADB-Bridging-Header.h";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+C1000000000000000000003E = {isa = XCBuildConfiguration; buildSettings = {
+ APPLICATION_EXTENSION_API_ONLY = YES;
+ CODE_SIGN_STYLE = Automatic;
+ CODE_SIGN_ENTITLEMENTS = TVADBWidget/TVADBWidget.entitlements;
+ DEVELOPMENT_TEAM = 25A4T2SB4Q;
+ CURRENT_PROJECT_VERSION = 4;
+ MARKETING_VERSION = 1.3;
+ GENERATE_INFOPLIST_FILE = NO;
+ INFOPLIST_FILE = TVADBWidget/Info.plist;
+ PRODUCT_BUNDLE_IDENTIFIER = com.tvadb.ios.RemoteWidget;
+ PRODUCT_NAME = TVADBWidget;
+ SKIP_INSTALL = YES;
+ IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+ SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+ TARGETED_DEVICE_FAMILY = "1,2";
+ SWIFT_VERSION = 5.0;
+ SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) TVADB_WIDGET";
+ LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+ }; name = Debug; };
+C1000000000000000000003F = {isa = XCBuildConfiguration; buildSettings = {
+ APPLICATION_EXTENSION_API_ONLY = YES;
+ CODE_SIGN_STYLE = Automatic;
+ CODE_SIGN_ENTITLEMENTS = TVADBWidget/TVADBWidget.entitlements;
+ DEVELOPMENT_TEAM = 25A4T2SB4Q;
+ CURRENT_PROJECT_VERSION = 4;
+ MARKETING_VERSION = 1.3;
+ GENERATE_INFOPLIST_FILE = NO;
+ INFOPLIST_FILE = TVADBWidget/Info.plist;
+ PRODUCT_BUNDLE_IDENTIFIER = com.tvadb.ios.RemoteWidget;
+ PRODUCT_NAME = TVADBWidget;
+ SKIP_INSTALL = YES;
+ IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+ SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+ TARGETED_DEVICE_FAMILY = "1,2";
+ SWIFT_VERSION = 5.0;
+ SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) TVADB_WIDGET";
+ LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+ }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000000000000000000801 /* Build configuration list for PBXProject "iosadb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000901 /* Debug */,
+				A00000000000000000000902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00000000000000000000802 /* Build configuration list for PBXNativeTarget "TVADB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00000000000000000000903 /* Debug */,
+				A00000000000000000000904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+C1000000000000000000003D = {isa = XCConfigurationList; buildConfigurations = (C1000000000000000000003E,C1000000000000000000003F,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A00000000000000000000701 /* Project object */;
+}
