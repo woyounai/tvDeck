@@ -148,6 +148,6 @@ iOS Widget 的链路为 `TVADBWidget` → `TVRemoteWidgetIntent` → `TVADBWidge
 
 - iOS 与 Android 各自持有随包 Helper：iOS 为 `iosadb/Resources/`，Android 为 `app/src/main/assets/`。协议或源码变动须核对两端资源；现有部分 Helper 脚本仅更新 iOS，视频脚本同时更新两端，不能假定所有脚本行为相同。
 - iOS 模拟器运行、无签名 IPA、Android 调试构建和两端 Android Release 均有 `scripts/` 入口。Release 包默认未签名；提供环境变量时执行 zipalign、签名及验证。升级依赖同一包名与签名，密钥不进入源码。
-- Android 手机客户端与电视向导分别使用独立的手动 Actions，输入版本名和递增 versionCode 后注入 APK。流程复用各自 Release 脚本，以 Secrets 签名并上传 APK 和校验清单，创建 `android-v…` / `tv-v…` Release 草稿；由用户检查后发布，不覆盖已有版本。流程与本地构建应使用相同密钥。
+- Android 手机客户端与电视向导分别使用独立的手动 Actions，输入版本名和递增 versionCode 后注入 APK。流程复用各自 Release 脚本，以 Secrets 签名并上传 APK 和校验清单，创建 `android-v…` / `tv-v…` Release 草稿；由用户检查后发布，不覆盖已有版本。新增的联合流程独立输入发布版本和两端 APK 版本，顺序构建两端，共用一份 SHA-256 清单，并只创建一个 `v…` 草稿；任一构建失败都不创建草稿。独立流程仍可单独使用。流程与本地构建应使用相同密钥。
 - 主机逻辑测试覆盖协议、状态机、解析和边界；Android 单元测试不等于设备测试。无签名构建不能证明设备签名、App Group 或电视权限可用。
 - 真机仍需验证 OEM 配对/输入法、UHID/uinput 权限、编码器、后台回收、文件提供方和网络隔离。不把旧记录、跳过的测试或单次构建写成当前真机通过结论。

@@ -1,0 +1,123 @@
+name: Combined Android signed Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: 'Combined release version, e.g. 0.1.1 (without v)'
+        required: true
+        type: string
+      client_version:
+        description: 'Phone/tablet APK version name, e.g. 0.1.1'
+        required: true
+        type: string
+      client_version_code:
+        description: 'Phone/tablet APK version code: higher than previous release'
+        required: true
+        type: string
+      tv_version:
+        description: 'TV companion APK version name, e.g. 1.0.1'
+        required: true
+        type: string
+      tv_version_code:
+        description: 'TV companion APK version code: higher than previous release'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.release_version }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      JAVA_VERSION: '21'
+      RELEASE_VERSION: ${{ inputs.release_version }}
+      CLIENT_VERSION: ${{ inputs.client_version }}
+      CLIENT_VERSION_CODE: ${{ inputs.client_version_code }}
+      TV_VERSION: ${{ inputs.tv_version }}
+      TV_VERSION_CODE: ${{ inputs.tv_version_code }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+      - name: Validate versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          for version in "$RELEASE_VERSION" "$CLIENT_VERSION" "$TV_VERSION"; do
+            [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]] || {
+              echo 'Versions must look like 0.1.1 or 0.1.1-beta.1' >&2; exit 1;
+            }
+          done
+          for code in "$CLIENT_VERSION_CODE" "$TV_VERSION_CODE"; do
+            [[ "$code" =~ ^[1-9][0-9]{0,9}$ ]] && (( code <= 2100000000 )) || {
+              echo 'Version codes must be between 1 and 2100000000' >&2; exit 1;
+            }
+          done
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+      - name: Install Android SDK
+        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Check release scripts
+        run: |
+          python3 tests/test_android_release_scripts.py
+          python3 tests/test_github_android_signing.py
+          python3 tests/test_android_release_workflows.py
+      - name: Build and sign both APKs
+        shell: bash
+        env:
+          ANDROID_RELEASE_KEYSTORE_BASE64: ${{ secrets.ANDROID_RELEASE_KEYSTORE_BASE64 }}
+          TVADB_KEY_ALIAS: ${{ secrets.ANDROID_RELEASE_KEY_ALIAS }}
+          TVADB_STORE_PASSWORD: ${{ secrets.ANDROID_RELEASE_STORE_PASSWORD }}
+          TVADB_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
+          TVADB_KEYSTORE: ${{ runner.temp }}/tvadb-release.jks
+        run: |
+          set -euo pipefail
+          : "${ANDROID_RELEASE_KEYSTORE_BASE64:?Missing release keystore secret}"
+          : "${TVADB_KEY_ALIAS:?Missing release alias secret}"
+          : "${TVADB_STORE_PASSWORD:?Missing release store password secret}"
+          : "${TVADB_KEY_PASSWORD:?Missing release key password secret}"
+          umask 077
+          trap 'rm -f "$TVADB_KEYSTORE"' EXIT
+          printf '%s' "$ANDROID_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$TVADB_KEYSTORE"
+          TVADB_VERSION_NAME="$CLIENT_VERSION" TVADB_VERSION_CODE="$CLIENT_VERSION_CODE" ./scripts/build-android-client-release.sh
+          TVADB_VERSION_NAME="$TV_VERSION" TVADB_VERSION_CODE="$TV_VERSION_CODE" ./scripts/build-android-tv-release.sh
+          cd dist
+          sha256sum TVDeck-Android-release.apk TVDeck-Connect-release.apk > SHA256SUMS
+      - name: Remove signing material
+        if: always()
+        shell: bash
+        run: rm -f "$RUNNER_TEMP/tvadb-release.jks"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TVDeck-combined-${{ inputs.release_version }}
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            dist/TVDeck-Android-release.apk
+            dist/TVDeck-Connect-release.apk
+            dist/SHA256SUMS
+      - name: Create Release draft
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          gh release create "v$RELEASE_VERSION" \
+            "dist/TVDeck-Android-release.apk" "dist/TVDeck-Connect-release.apk" dist/SHA256SUMS \
+            --target "$GITHUB_SHA" --draft \
+            --title "TVDeck $RELEASE_VERSION" \
+            --notes "Phone/tablet: TVDeck Android $CLIENT_VERSION (versionCode $CLIENT_VERSION_CODE). TV: TVDeck Connect $TV_VERSION (versionCode $TV_VERSION_CODE). Review both APKs and SHA256SUMS before publishing. Source: $GITHUB_SHA."
