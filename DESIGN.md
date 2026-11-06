@@ -140,7 +140,7 @@ Shell 由用户点击执行，命令在目标电视执行。预设、关键词�
 
 ## 10. 使用须知与 Widget
 
-使用须知是功能门控，不仅是启动页面。两端在版本或声明区域不匹配时要求主动确认；CN 使用大陆版，其余使用国际版，无法获取时回退大陆版。地区只读系统设置，声明语言独立选择。未确认时连接、扫描、设备命令、后台维护和 Widget 入口都必须拒绝。设置保留声明及本机确认记录入口，不向 Widget 导出该记录。
+使用须知是功能门控，不仅是启动页面。首次启动时 iOS 在未开放主界面的背景上显示居中卡片，Android 在主窗口首帧显示后打开独立浮动 Activity，保留未开放功能的主窗口作为背景，同意后重新初始化主页面；两端高度受限、正文滚动，确认区保留在底部，不采用全屏展示。iOS 设置入口使用受限高度的 sheet。两端在版本或声明区域不匹配时要求主动确认；CN 使用大陆版，其余使用国际版，无法获取时回退大陆版。地区只读系统设置，声明语言独立选择。未确认时连接、扫描、设备命令、后台维护和 Widget 入口都必须拒绝。设置保留声明及本机确认记录入口，不向 Widget 导出该记录。
 
 iOS Widget 的链路为 `TVADBWidget` → `TVRemoteWidgetIntent` → `TVADBWidgetController` → `TVADBAppRuntime.model`。App Group 仅保存展示与连接标识，不存 ADB 身份。Android 由 `DeckWidget` 将白名单按键交给 `ConnectionService` 和共享 Model，校验设备 ID/token。两端切换设备或手动断开使旧按钮失效，冷启动只恢复指定目标。Widget 显示不是实时在线监控，也不提供 App 内相同的长按连发。详见 [docs/home-screen-widget.md](docs/home-screen-widget.md)。
 

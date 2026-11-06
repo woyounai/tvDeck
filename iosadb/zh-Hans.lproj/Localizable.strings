@@ -943,7 +943,6 @@
 /* Versioned usage notice */
 "legal_title" = "使用须知与风险声明";
 "legal_version" = "声明版本";
-"legal_region" = "适用声明";
 "legal_mainland" = "中国大陆";
 "legal_international" = "中国大陆以外";
 "legal_language" = "声明语言";

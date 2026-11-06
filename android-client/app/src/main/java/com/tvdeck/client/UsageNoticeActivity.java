@@ -18,6 +18,7 @@ public final class UsageNoticeActivity extends Activity {
     @Override public void onCreate(Bundle state){
         super.onCreate(state);
         readOnly=getIntent().getBooleanExtra("readOnly",false)&&UsageConsent.accepted(this);
+        setFinishOnTouchOutside(readOnly);
         region=UsageConsent.systemRegion();
         String appLanguage=getSharedPreferences("settings",0).getString("language","");
         language=(appLanguage.isEmpty()?getResources().getConfiguration().getLocales().get(0).getLanguage():appLanguage)
@@ -29,6 +30,10 @@ public final class UsageNoticeActivity extends Activity {
         super.onResume();
         String current=UsageConsent.systemRegion();
         if(!current.equals(region)){region=current;render();}
+    }
+
+    @Override public void onBackPressed(){
+        if(readOnly)super.onBackPressed();else finishAffinity();
     }
 
     private String text(int id){return localized.getString(id);}
@@ -58,7 +63,7 @@ public final class UsageNoticeActivity extends Activity {
         localized=createConfigurationContext(configuration);
         LinearLayout root=new LinearLayout(localized);
         root.setOrientation(LinearLayout.VERTICAL);
-        root.setPadding(dp(20),0,dp(20),0);
+        root.setPadding(dp(24),dp(16),dp(24),dp(16));
         root.setFitsSystemWindows(true);
         root.addView(label(text(R.string.legal_title),true));
         ScrollView scroll=new ScrollView(localized);
@@ -68,9 +73,6 @@ public final class UsageNoticeActivity extends Activity {
         root.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));
         body.addView(label(text(R.string.legal_intro),false));
         body.addView(label(text(R.string.legal_version)+" · "+UsageConsent.VERSION,false));
-        String selected=
-            text(region.equals(UsageConsent.MAINLAND)?R.string.legal_mainland:R.string.legal_international);
-        body.addView(label(text(R.string.legal_region)+" · "+selected,false));
         body.addView(button(text(R.string.legal_language)+" · "+(language.equals("en")?"English":"简体中文"),()->{
             new AlertDialog.Builder(this).setTitle(text(R.string.legal_language))
                 .setItems(new String[]{"简体中文","English"},(dialog,index)->{
@@ -86,7 +88,7 @@ public final class UsageNoticeActivity extends Activity {
             region.equals(UsageConsent.MAINLAND)?R.string.legal_rights_cn:R.string.legal_rights_intl);
         section(body,R.string.legal_acceptance_title,R.string.legal_acceptance);
         body.addView(button(text(R.string.legal_feedback),()->startActivity(
-            new Intent(Intent.ACTION_VIEW,Uri.parse("https://github.com/wy164519317/tvadb/issues")))));
+            new Intent(Intent.ACTION_VIEW,Uri.parse("https://github.com/woyounai/tvDeck/issues")))));
         if(readOnly){
             android.content.SharedPreferences saved=UsageConsent.preferences(this);
             body.addView(label(text(R.string.legal_record_hint)+"\n"+saved.getString("version","")
@@ -113,7 +115,7 @@ public final class UsageNoticeActivity extends Activity {
                     return;
                 }
                 DeckWidget.updateAll(this);
-                startActivity(new Intent(this,MainActivity.class));
+                if(isTaskRoot())startActivity(new Intent(this,MainActivity.class));
                 finish();
             });
             agree.setEnabled(false);
@@ -123,5 +125,8 @@ public final class UsageNoticeActivity extends Activity {
             root.addView(buttons);
         }
         setContentView(root);
+        android.util.DisplayMetrics metrics=getResources().getDisplayMetrics();
+        getWindow().setLayout(Math.min(dp(640),Math.max(1,metrics.widthPixels-dp(32))),
+            Math.max(1,(int)(metrics.heightPixels*0.85f)));
     }
 }

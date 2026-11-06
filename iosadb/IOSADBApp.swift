@@ -494,7 +494,19 @@ struct IOSADBApp: App {
                 if UsageConsent.isAccepted(UsageConsent.record(from: usageConsentRecord)) {
                     RootView()
                 } else {
-                    UsageNoticeView()
+                    GeometryReader { geometry in
+                        ZStack {
+                            TVADBBackdrop()
+                            Color.black.opacity(0.35)
+                            UsageNoticeView()
+                                .frame(width: min(640, max(0, geometry.size.width - 32)),
+                                       height: geometry.size.height * 0.85)
+                                .background(.background)
+                                .clipShape(RoundedRectangle(cornerRadius: 24))
+                                .shadow(radius: 20)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
                 }
             }
                 .environmentObject(model)

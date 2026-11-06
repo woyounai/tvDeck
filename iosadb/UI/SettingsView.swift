@@ -169,7 +169,12 @@ struct TVADBSettingsForm: View {
             }
         }
         .tvadbScreenBackground()
-        .sheet(isPresented: $showUsageNotice) { UsageNoticeView(readOnly: true) }
+        .sheet(isPresented: $showUsageNotice) {
+            UsageNoticeView(readOnly: true)
+                .presentationDetents([.fraction(0.85)])
+                .presentationCompactAdaptation(.none)
+                .presentationCornerRadius(24)
+        }
         .onAppear { selectedAppIcon = UIApplication.shared.alternateIconName ?? "" }
         .onChange(of: loadApplicationIcons) { _, isEnabled in
             Task {

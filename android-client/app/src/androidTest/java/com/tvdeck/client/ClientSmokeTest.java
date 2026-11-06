@@ -10,6 +10,64 @@ import java.util.concurrent.*;
 import java.lang.reflect.*;
 
 public class ClientSmokeTest {
+    @Test public void firstLaunchNoticeKeepsAVisibleHostWithoutOpeningDeviceFeatures() throws Exception {
+        android.app.Instrumentation instrumentation=InstrumentationRegistry.getInstrumentation();
+        Context context=instrumentation.getTargetContext();
+        org.junit.Assume.assumeFalse(UsageConsent.accepted(context));
+        android.app.Instrumentation.ActivityMonitor monitor=instrumentation.addMonitor(UsageNoticeActivity.class.getName(),null,false);
+        MainActivity host=null;android.app.Activity notice=null;
+        try{
+            host=(MainActivity)instrumentation.startActivitySync(new Intent(context,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            notice=instrumentation.waitForMonitorWithTimeout(monitor,5000);
+            assertNotNull("Notice must appear after the host starts",notice);
+            final MainActivity main=host;
+            instrumentation.runOnMainSync(()->{
+                assertFalse(main.isFinishing());
+                assertTrue(main.findViewById(android.R.id.content).isLaidOut());
+                try{
+                    Field model=MainActivity.class.getDeclaredField("model");model.setAccessible(true);
+                    assertNull("Device features must remain closed before consent",model.get(main));
+                }catch(ReflectiveOperationException error){throw new AssertionError(error);}
+            });
+        }finally{
+            final MainActivity main=host;final android.app.Activity shown=notice;
+            instrumentation.runOnMainSync(()->{if(main!=null)main.finish();if(shown!=null)shown.finish();});
+            instrumentation.removeMonitor(monitor);
+        }
+    }
+    @Test public void usageNoticeIsFloatingWithoutLaunchArtwork() throws Exception {
+        android.app.Instrumentation instrumentation=InstrumentationRegistry.getInstrumentation();
+        UsageNoticeActivity activity=(UsageNoticeActivity)instrumentation.startActivitySync(
+            new Intent(instrumentation.getTargetContext(),UsageNoticeActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        try{
+            instrumentation.waitForIdleSync();
+            instrumentation.runOnMainSync(()->{
+                android.content.res.TypedArray theme=activity.obtainStyledAttributes(new int[]{android.R.attr.windowBackground,android.R.attr.windowIsFloating});
+                try{
+                    assertTrue("Notice must use a floating window",theme.getBoolean(1,false));
+                    android.graphics.drawable.Drawable background=theme.getDrawable(0);
+                    assertTrue("Notice must not inherit the launch artwork",background instanceof android.graphics.drawable.ColorDrawable);
+                    assertEquals(255,android.graphics.Color.alpha(((android.graphics.drawable.ColorDrawable)background).getColor()));
+                }finally{theme.recycle();}
+                android.view.WindowManager.LayoutParams bounds=activity.getWindow().getAttributes();
+                android.util.DisplayMetrics metrics=activity.getResources().getDisplayMetrics();
+                assertTrue(bounds.width>0&&bounds.width<metrics.widthPixels);
+                assertTrue(bounds.height>0&&bounds.height<metrics.heightPixels);
+                android.view.ViewGroup content=activity.findViewById(android.R.id.content);
+                android.view.View panel=content.getChildAt(0);
+                assertTrue(panel.getPaddingTop()>0&&panel.getPaddingBottom()>0);
+                assertTrue(panel.getPaddingLeft()>0&&panel.getPaddingRight()>0);
+                assertTrue(activity.getWindow().getDecorView().isShown());
+                boolean titleVisible=false;
+                for(String language:new String[]{"en","zh-Hans"}){
+                    android.content.res.Configuration config=new android.content.res.Configuration(activity.getResources().getConfiguration());
+                    config.setLocales(android.os.LocaleList.forLanguageTags(language));
+                    titleVisible|=hasText(activity.getWindow().getDecorView(),activity.createConfigurationContext(config).getString(R.string.legal_title));
+                }
+                assertTrue(titleVisible);
+            });
+        }finally{instrumentation.runOnMainSync(activity::finish);}
+    }
     @Test public void aerialInstallProgressAppearsOnDevice() throws Exception {
         android.app.Instrumentation instrumentation=InstrumentationRegistry.getInstrumentation();
         MainActivity activity=(MainActivity)instrumentation.startActivitySync(new Intent(instrumentation.getTargetContext(),MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));

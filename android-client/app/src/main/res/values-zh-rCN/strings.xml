@@ -198,7 +198,6 @@
     <string name="invalid_connection_qr">不是有效的电视连接或 Aerial 二维码。</string>
     <string name="legal_title">使用须知与风险声明</string>
     <string name="legal_version">声明版本</string>
-    <string name="legal_region">适用声明</string>
     <string name="legal_mainland">中国大陆</string>
     <string name="legal_international">中国大陆以外</string>
     <string name="legal_language">声明语言</string>

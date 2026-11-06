@@ -198,7 +198,6 @@
     <string name="invalid_connection_qr">Not a valid TV connection or Aerial QR.</string>
     <string name="legal_title">Terms of Use and Risk Notice</string>
     <string name="legal_version">Notice version</string>
-    <string name="legal_region">Notice region</string>
     <string name="legal_mainland">Mainland China</string>
     <string name="legal_international">Outside mainland China</string>
     <string name="legal_language">Notice language</string>

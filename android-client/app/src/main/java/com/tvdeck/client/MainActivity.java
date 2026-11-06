@@ -70,7 +70,7 @@ public final class MainActivity extends Activity implements DeckModel.Listener {
     private volatile long previewGeneration;
     private final AtomicInteger dx=new AtomicInteger(),dy=new AtomicInteger();
     private final AtomicBoolean mouseSending=new AtomicBoolean();
-    private boolean darkMode,resumed;
+    private boolean darkMode,resumed,noticeRequested;
     private MousePad mousePad;
     private int CYAN=Color.rgb(35,229,240), BG=Color.rgb(9,11,25), FG=Color.rgb(231,237,250);
 
@@ -83,17 +83,39 @@ public final class MainActivity extends Activity implements DeckModel.Listener {
         preferences=getSharedPreferences("settings",0);shellHistory.addAll(loadStringList(getSharedPreferences("shell-history",0).getString("items","[]")));applyTheme();
         super.onCreate(state);
         if(!UsageConsent.accepted(this)){
-            startActivity(new Intent(this,UsageNoticeActivity.class));
-            finish();
+            FrameLayout gate=new FrameLayout(this);
+            gate.setBackgroundColor(BG);
+            setContentView(gate);
             return;
         }
+        initializeMain(state);
+    }
+    private void initializeMain(Bundle state){
         if(getIntent().getBooleanExtra("remote",false))tab=2;model=((DeckApplication)getApplication()).model();
         getWindow().setStatusBarColor(BG);getWindow().setNavigationBarColor(BG);getWindow().getDecorView().setSystemUiVisibility(darkMode?0:View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         render();
         if(state==null&&!model.connected&&preferences.getBoolean("auto-connect",false)){DeviceStore.Device recent=null;for(DeviceStore.Device device:model.devices.all())if(recent==null||device.connectedAt>recent.connectedAt)recent=device;if(recent!=null)connect(recent.host,recent.port,null,0);}
     }
-    @Override public void onResume() {super.onResume();if(model==null)return;if(!UsageConsent.accepted(this)){stopService(new Intent(this,ConnectionService.class));model.worker.execute(model::disconnect);startActivity(new Intent(this,UsageNoticeActivity.class));finish();return;}resumed=true;model.listener=this;if(!model.connected&&!settingsTab)render();changed();if(mousePad!=null)mousePad.start();if(model.connected&&model.aerialStatus==null)model.refreshAerial();}
-    @Override public void onPause() {if(model==null){super.onPause();return;}resumed=false;if(mousePad!=null)mousePad.stop();directionGeneration++;closeVolumeGesture();setPreviewFullScreen(false);stopPreview();stopDiscovery();if(keyboardDialog!=null)keyboardDialog.dismiss();if(logsDialog!=null)logsDialog.dismiss();super.onPause();}
+    @Override public void onResume() {super.onResume();resumed=true;noticeRequested=false;if(model==null){if(!UsageConsent.accepted(this))return;initializeMain(null);}if(!UsageConsent.accepted(this)){stopService(new Intent(this,ConnectionService.class));model.worker.execute(model::disconnect);recreate();return;}model.listener=this;if(!model.connected&&!settingsTab)render();changed();if(mousePad!=null)mousePad.start();if(model.connected&&model.aerialStatus==null)model.refreshAerial();}
+    @Override public void onPostResume(){
+        super.onPostResume();
+        if(UsageConsent.accepted(this)||noticeRequested)return;
+        View host=getWindow().getDecorView();
+        // Wait for the host frame so the launch window cannot cover the floating notice.
+        host.getViewTreeObserver().addOnPreDrawListener(new android.view.ViewTreeObserver.OnPreDrawListener(){
+            @Override public boolean onPreDraw(){
+                host.getViewTreeObserver().removeOnPreDrawListener(this);
+                host.post(()->{
+                    if(!resumed||isFinishing()||isDestroyed()||noticeRequested||UsageConsent.accepted(MainActivity.this))return;
+                    noticeRequested=true;
+                    startActivity(new Intent(MainActivity.this,UsageNoticeActivity.class));
+                });
+                return true;
+            }
+        });
+        host.invalidate();
+    }
+    @Override public void onPause() {resumed=false;if(model==null){super.onPause();return;}if(mousePad!=null)mousePad.stop();directionGeneration++;closeVolumeGesture();setPreviewFullScreen(false);stopPreview();stopDiscovery();if(keyboardDialog!=null)keyboardDialog.dismiss();if(logsDialog!=null)logsDialog.dismiss();super.onPause();}
     @Override public void onDestroy() {if(model!=null&&model.listener==this) model.listener=null;super.onDestroy();}
     @Override public void onBackPressed(){if(previewFullScreen){setPreviewFullScreen(false);return;}if(aerialDetails){aerialDetails=false;tab=4;render();return;}super.onBackPressed();}
     @Override public void changed() {if(model==null||!UsageConsent.accepted(this))return;if(!model.connected&&nav!=null){nav=null;render();return;}if(status!=null){status.setText(model.busy?(model.installWorking?model.operation+"  "+Math.round(model.installProgress*100)+"%":model.operation):model.deviceName);status.setVisibility(model.busy&&!model.operation.isEmpty()?View.VISIBLE:View.INVISIBLE);}setButtonsEnabled(content,!model.busy);setButtonsEnabled(nav,!model.busy);if(aerialProgressBar!=null){boolean installing=model.busy&&model.installWorking;aerialProgressBar.setVisibility(model.busy&&(model.aerialWorking||installing)?View.VISIBLE:View.INVISIBLE);double value=installing?model.installProgress:model.aerialProgress;aerialProgressBar.setIndeterminate(Double.isNaN(value));if(!Double.isNaN(value))aerialProgressBar.setProgress((int)(value*1000));}if(previewFullScreen){if(status!=null)status.setVisibility(View.GONE);if(aerialProgressBar!=null)aerialProgressBar.setVisibility(View.GONE);}renderAerialCard();loadPendingFiles();loadPendingApps();}

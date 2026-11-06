@@ -1173,7 +1173,6 @@
 /* Versioned usage notice */
 "legal_title" = "Terms of Use and Risk Notice";
 "legal_version" = "Notice version";
-"legal_region" = "Notice region";
 "legal_mainland" = "Mainland China";
 "legal_international" = "Outside mainland China";
 "legal_language" = "Notice language";

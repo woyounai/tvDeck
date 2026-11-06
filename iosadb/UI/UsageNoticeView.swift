@@ -23,7 +23,6 @@ struct UsageNoticeView: View {
                     Text(text("legal_intro"))
                     Text("\(text("legal_version")) · \(UsageConsent.version)")
                         .font(.caption).foregroundStyle(.secondary)
-                    LabeledContent(text("legal_region"), value: text(region.titleKey))
                     Picker(text("legal_language"), selection: $language) {
                         Text(verbatim: "简体中文").tag("zh-Hans")
                         Text(verbatim: "English").tag("en")
@@ -34,7 +33,7 @@ struct UsageNoticeView: View {
                     section("legal_compatibility_title", "legal_compatibility")
                     section("legal_rights_title", region == .mainland ? "legal_rights_cn" : "legal_rights_intl")
                     section("legal_acceptance_title", "legal_acceptance")
-                    Link(text("legal_feedback"), destination: URL(string: "https://github.com/wy164519317/tvadb/issues")!)
+                    Link(text("legal_feedback"), destination: URL(string: "https://github.com/woyounai/tvDeck/issues")!)
                     if readOnly, let record = UsageConsent.savedRecord {
                         VStack(alignment: .leading, spacing: 6) {
                             Text(text("legal_record_hint")).font(.caption)
@@ -45,7 +44,7 @@ struct UsageNoticeView: View {
                     }
                 }
                 .frame(maxWidth: 740, alignment: .leading)
-                .padding(20)
+                .padding(24)
                 .frame(maxWidth: .infinity)
             }
             .safeAreaInset(edge: .bottom) {
@@ -70,7 +69,8 @@ struct UsageNoticeView: View {
                         }
                     }
                     .frame(maxWidth: 740)
-                    .padding()
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 20)
                     .frame(maxWidth: .infinity)
                     .background(.regularMaterial)
                 }
@@ -85,6 +85,7 @@ struct UsageNoticeView: View {
                 }
             }
         }
+        .padding(8)
         .onChange(of: region) { _, _ in acknowledged = false }
         .onChange(of: language) { _, _ in acknowledged = false }
         .onChange(of: scenePhase) { _, phase in
