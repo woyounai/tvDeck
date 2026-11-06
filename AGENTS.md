@@ -85,7 +85,7 @@ TVADB / TVDeck 包含三个独立客户端：
 | Java Helper | 按需运行 `tests/test_remote_keys.py`、`tests/test_text_sync_helper.py`、`tests/test_video_stream_helper.py`；先读脚本所需 JDK / Android SDK 环境变量 |
 | H.264 实际编解码 | `./tests/run-h264-roundtrip-tests.sh`；环境不支持时如实报告跳过 |
 | ADB 预编译库 | `python3 tests/test_adb_prebuilt.py`；模拟器运行另见 `tests/run-adb-simulator-smoke.sh` |
-| Android Release / 签名工具 | `python3 tests/test_android_release_scripts.py`、`python3 tests/test_github_android_signing.py` |
+| Android Release / 签名工具 | `python3 tests/test_android_release_scripts.py`、`python3 tests/test_github_android_signing.py`、`python3 tests/test_android_release_workflows.py` |
 
 完整 iOS 构建需要 macOS 与完整 Xcode：
 

@@ -120,6 +120,8 @@ dist/TVDeck-Android-release-unsigned.apk
 - `TVADB_STORE_PASSWORD`、`TVADB_KEY_PASSWORD`：通过本机安全方式注入的密码，不要写入仓库或脚本。
 - `TVADB_BUILD_TOOLS`：可选，默认 `35.0.0`。
 
+可设置 `TVADB_VERSION_NAME` 与 `TVADB_VERSION_CODE` 覆盖 APK 版本名和版本代码；升级时版本代码应递增。未设置时使用工程默认值。
+
 签名成功并校验后，输出 `dist/TVDeck-Android-release.apk`。持续升级必须保留相同包名和签名；请妥善备份密钥。脚本不生成密钥、不安装、不上传。
 
 

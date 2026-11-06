@@ -7,8 +7,8 @@ android {
         applicationId 'com.tvadb.onboarding'
         minSdk 23
         targetSdk 28
-        versionCode 1
-        versionName '1.0'
+        versionCode = (System.getenv('TVADB_VERSION_CODE') ?: '1').toInteger()
+        versionName = (System.getenv('TVADB_VERSION_NAME') ?: '1.0')
     }
     // Direct-distribution companion retains legacy LAN behavior; store targeting needs a separate migration.
     lint { disable 'ExpiredTargetSdkVersion' }

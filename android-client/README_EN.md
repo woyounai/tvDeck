@@ -50,6 +50,8 @@ Unsigned APKs cannot be installed directly. To produce signed APKs, supply these
 - `TVADB_STORE_PASSWORD`, `TVADB_KEY_PASSWORD`: inject securely; never commit passwords.
 - `TVADB_BUILD_TOOLS`: optional; defaults to `35.0.0`.
 
+Set `TVADB_VERSION_NAME` and `TVADB_VERSION_CODE` to override the APK version name and code. Increase the code for upgrades. Without these variables, project defaults apply.
+
 Verified signed output: `dist/TVDeck-Android-release.apk`. Keep the same application ID and signing key for updates; back up your key securely. Scripts do not create keys, install or upload.
 
 ## Android differences and validation limits
